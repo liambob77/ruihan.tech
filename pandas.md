@@ -1,3 +1,4 @@
+``` python
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
@@ -21,6 +22,8 @@ df2 = pd.read_csv('new.csv', dtype=str, index_col=False,
                   converters = {'deal_num' : strip,
                                     'acount' : strip,
                                     'number' : make_int})
+```
+
 
 # List unique values in a DataFrame column
 pd.unique(df.column_name.ravel())
