@@ -1,1 +1,1 @@
-[Cheat sheet of git]<README.md>
+[Cheat sheet of git](README.md)
