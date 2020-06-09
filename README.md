@@ -1,4 +1,3 @@
-The sheet originaly forked from aleksey-bykov/git-cheat-list.md
 # Git cheat list
 
 - specifying revisions: http://schacon.github.io/git/git-rev-parse.html#_specifying_revisions
