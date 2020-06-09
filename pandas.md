@@ -53,7 +53,7 @@ del df['column']
 ```
 
 - Select from DataFrame using criteria from multiple columns
-- (use `|` instead of `&` to do an OR)
+    (use `|` instead of `&` to do an OR)
 ```
 newdf = df[(df['column_one'] > 2004) & (df['column_two'] == 9)]
 ```
