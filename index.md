@@ -1,4 +1,6 @@
-# [Cheat sheet of git](git.md)
+# Cheat sheets
+
+## [Cheat sheet of git](git.md)
 
 ***
 
