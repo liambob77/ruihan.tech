@@ -1,7 +1,5 @@
 # Git cheat list
 
-- specifying revisions: http://schacon.github.io/git/git-rev-parse.html#_specifying_revisions
-
 - list of all affected files both tracked/untracked (for automation)  
   ```
   git status --porcelain
