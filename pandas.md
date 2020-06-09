@@ -74,30 +74,29 @@ df.columns = map(str.lower, df.columns)
 ```
 
 - Even more fancy DataFrame column re-naming
-- lower-case all DataFrame column names (for example)
+    lower-case all DataFrame column names (for example)
 ```
 df.rename(columns=lambda x: x.split('.')[-1], inplace=True)
 ```
 
 - Loop through rows in a DataFrame
-- (if you must)
+    (if you must)
 ```
 for index, row in df.iterrows():
     print(index, row['some column'])
 ```
 
 - Much faster way to loop through DataFrame rows
-- if you can work with tuples
-- (h/t hughamacmullaniv)
+    if you can work with tuples
+    (h/t hughamacmullaniv)
 ```
 for row in df.itertuples():
     print(row)
 ```
 
 - Next few examples show how to work with text data in Pandas.
-- Full list of .str functions: http://pandas.pydata.org/pandas-docs/stable/text.html
-
-- Slice values in a DataFrame column (aka Series)
+    Full list of .str functions: http://pandas.pydata.org/pandas-docs/stable/text.html
+    Slice values in a DataFrame column (aka Series)
 ```
 df.column.str[0:2]
 ```
@@ -118,7 +117,7 @@ df = df.sort(['col1', 'col2', 'col3'], ascending=[1, 1, 0])
 ```
 
 - Get top n for each group of columns in a sorted dataframe
-- (make sure dataframe is sorted first)
+    (make sure dataframe is sorted first)
 ```
 top5 = df.groupby(['groupingcol1', 'groupingcol2']).head(5)
 ```
@@ -140,8 +139,8 @@ df = df.where((pd.notnull(df)), None)
 ```
 
 - More pre-db insert cleanup...make a pass through the dataframe, stripping whitespace
-- from strings and changing any empty values to None
-- (not especially recommended but including here b/c I had to do this in real life one time)
+    from strings and changing any empty values to None
+    (not especially recommended but including here b/c I had to do this in real life one time)
 ```
 df = df.applymap(lambda x: str(x).strip() if len(str(x).strip()) else None)
 ```
@@ -152,8 +151,8 @@ len(df.index)
 ```
 
 - Pivot data (with flexibility about what what
-- becomes a column and what stays a row).
-- Syntax works on Pandas >= .14
+    becomes a column and what stays a row).
+    Syntax works on Pandas >= .14
 ```
 pd.pivot_table(
   df,values='cell_value',
@@ -190,13 +189,13 @@ df = df.fillna({
 ```
 
 - Concatenate two DataFrame columns into a new, single column
-- (useful when dealing with composite keys, for example)
+    (useful when dealing with composite keys, for example)
 ```
 df['newcol'] = df['col1'].map(str) + df['col2'].map(str)
 ```
 
 - Doing calculations with DataFrame columns that have missing values
-- In example below, swap in 0 for df['col1'] cells that contain null
+    In example below, swap in 0 for df['col1'] cells that contain null
 ```
 df['new_col'] = np.where(pd.isnull(df['col1']),0,df['col1']) + df['col2']
 ```
