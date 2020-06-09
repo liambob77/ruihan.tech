@@ -1,1 +1,2 @@
-[Cheat sheet of git](README.md)
+[Cheat sheet of git](git.md)
+[Cheat sheet of pandas](pandas.md)
