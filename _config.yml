@@ -12,4 +12,4 @@ include:
   - README.md
   - git.md
 
-theme: jekyll-theme-dinky
+theme: jekyll-theme-midnight
