@@ -11,3 +11,5 @@ include:
   - index.md
   - README.md
   - git.md
+
+theme: jekyll-theme-dinky
