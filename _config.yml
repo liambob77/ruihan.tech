@@ -1,8 +1,8 @@
-theme: jekyll-theme-cayman
+otheme: jekyll-theme-cayman
 
 # Site settings
 title: ruihan.tech
-email: karpathy@cs.stanford.edu
+email: defbobo@sina.com
 description: "ruihan personal sit."
 baseurl: ""
 url: "https://liambob77.github.io"
