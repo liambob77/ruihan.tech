@@ -8,12 +8,13 @@ author: Wu Ruihan
 email: defbobo@sina.com
 description: "ruihan personal sit."
 baseurl: ""
-url: "https://liambob77.github.io"
 language: en
+
+url: "https://liambob77.github.io"
 
 include:
   - index.md
   - README.md
   - git.md
 
-theme: jekyll-theme-midnight
+# theme: jekyll-theme-midnight
