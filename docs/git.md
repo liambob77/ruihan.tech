@@ -1,10 +1,11 @@
 # Git cheat list
 
-- list of all affected files both tracked/untracked (for automation)  
-  ```
+- list of all affected files both tracked/untracked (for automation)
+
+  ``` bash
   git status --porcelain
   ```
-  
+
 - name of the current banch and nothing else (for automation)
    ```
    git rev-parse --abbrev-ref HEAD
