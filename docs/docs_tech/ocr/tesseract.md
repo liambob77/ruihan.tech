@@ -9,8 +9,7 @@ tesseract --list-langs
 
 ## --psm 参数
 
->
-0：定向脚本监测（OSD）
+> 0：定向脚本监测（OSD）
 1： 使用OSD自动分页
 2 ：自动分页，但是不使用OSD或OCR（Optical Character Recognition，光学字符识别）
 3 ：全自动分页，但是没有使用OSD（默认）
