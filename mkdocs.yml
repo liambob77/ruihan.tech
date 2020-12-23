@@ -1,15 +1,24 @@
 site_name: Ruihan
-theme: readthedocs
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
 repo_url: https://github.com/liambob77/liambob77.github.io/
 repo_name: liambob77.github.io
 site_author: Wu Ruihan
-nav:
-- Introduction: 'index.md'
-- xueersi: 'docs_cici'
-- works: 'docs_tech'
+# nav:
+# - Introduction: 'index.md'
+# - xueersi: docs_cici/xessx01.md
+# - works: docs_tech/*
+copyright: "Copyright © 2019 - 2020 Liam Bob"
 markdown_extensions:
     - smarty
     - toc:
         permalink: True
     - sane_lists
 
+plugins:
+    - search:
+        separator: '[\s\-\.]+'
