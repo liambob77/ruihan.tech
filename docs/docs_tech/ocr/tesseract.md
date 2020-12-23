@@ -1,4 +1,4 @@
-# tesseract OCR 点点滴滴
+# tesseract OCR
 
 ## tesseract 用法
 
