@@ -3,7 +3,8 @@ theme: readthedocs
 repo_url: https://github.com/liambob77/liambob77.github.io/
 repo_name: liambob77.github.io
 site_author: Wu Ruihan
-markdown_extensions: ['toc(permalink=true)', ]
 pages:
 - Introduction: index.md
 - xueersi: docs_cici/xessx01.md
+markdown_extensions: ['toc(permalink=true)', ]
+
