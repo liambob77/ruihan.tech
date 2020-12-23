@@ -6,5 +6,9 @@ site_author: Wu Ruihan
 pages:
 - Introduction: index.md
 - xueersi: docs_cici/xessx01.md
-markdown_extensions: ['toc(permalink=true)', ]
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: True
+    - sane_lists
 
