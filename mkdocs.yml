@@ -1,6 +1,6 @@
 site_name: Ruihan
 theme:
-    name: readthedocs
+    name: material
     highlightjs: true
     hljs_languages:
         - yaml
