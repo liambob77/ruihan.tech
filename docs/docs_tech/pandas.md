@@ -26,8 +26,8 @@ df2 = pd.read_csv('new.csv', dtype=str, index_col=False,
                                     'number' : make_int})
 ```
 
-
 - List unique values in a DataFrame column
+
 ```
 pd.unique(df.column_name.ravel())
 ```

@@ -1,4 +1,7 @@
+# Vagrant Notes
+
 ## Vagrant 命令简介
+
 ```javascript
 vagrant init {boxname} 初始化
 vagrant status  查看虚拟机运行状态
@@ -15,6 +18,7 @@ vagrant package 当前正在运行的VirtualBox虚拟环境打包成一个可重
 ```
 
 ## 创建虚拟机
+
 ```javascript
 vagrant init phusion/ubuntu-14.04-amd64
 vagrant up
@@ -22,14 +26,16 @@ vagrant ssh
 vagrant halt
 ```
 
-
 ## 打包创建虚机
+
 1、打包虚拟机
+
 ```javascript
 vagrant package
 ```
 
 2、当前目录就会生成package.box，之后新建虚拟机则可使用这个box。
+
 ```javascript 
 vagrant box add my_box ~/package.box
 vagrant init my_box
