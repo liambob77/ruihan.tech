@@ -11,7 +11,7 @@ theme:
         code: Roboto Mono
     palette:
         accent: deep purple
-        primary: blue grey
+        primary: light blue
 
     highlightjs: true
     titles_only: 'true'
