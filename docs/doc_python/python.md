@@ -2,8 +2,6 @@
 
 ---
 
-[python 官方文档](https://docs.python.org/zh-cn/3/)
-
 函数内代码执行效率更高
 
 ## Modify files
