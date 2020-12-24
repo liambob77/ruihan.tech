@@ -1,4 +1,5 @@
 # Netcat (nc) command examples
+
 Here’s the syntax for the nc command:
 
 ``` bash
@@ -8,6 +9,7 @@ nc [options] [hostname] [port]
 The syntax can vary depending on the application, but for most uses, your commands will follow this basic pattern.
 
 ## 1. Create a Connection Using TCP with netcat command
+
 As I mentioned earlier, the core functionality of netcat is joining two machines together. You can set up a connection using TCP to connect two separate machines, you can also emulate that connection using the terminal.
 
 The Listening Machine:
@@ -15,6 +17,7 @@ The Listening Machine:
 ``` bash
 nc -l 8080
 ```
+
 This command opens port 8080 and tells the machine to begin listening on this port.
 
 In order to establish a connection, you will use another terminal and enter the following.
@@ -24,6 +27,7 @@ The Client Machine:
 ``` bash
 nc 127.0.0.1 8080
 ```
+
 You can also use ‘localhost’ in place of the IP, or use the IP of your second PC here if you are making a remote connection.
 
 That’s it, you have opened a TCP port and established a connection between two systems.
@@ -41,6 +45,7 @@ Why would we use UDP over TCP or vice versa? It depends on the application. TCP 
 UDP can be chosen in situations where speed is more important than reliability transmitting information. One example of this is streaming data, like video. Video can be transferred more quickly over UDP, and even if there are errors in the transmission, they are less likely to impact the user experience.
 
 ## 2. Create a connection using UDP with nc command
+
 The steps for making a UDP connection are virtually identical to the ones we’ve already followed. You will add an option flag to specify that the type of port you want to open is UDP, not the default TCP.
 
 ``` bash
@@ -52,6 +57,7 @@ It’s that simple. That’s all you need to do to open UDP port ‘999’.
 You might wonder if you can use TCP and UDP with the same port number. You can, because they are separate protocols.
 
 ## 3. Use nc command to transfer files between remote systems
+
 There are other methods for transferring files from one system to another. You can also use the netcat command for this purpose.
 
 For this example, I created a demo that illustrates a remote file transfer from my Linux machine to my MacBook Pro.
@@ -65,10 +71,12 @@ nc -l 9999 > fromMac.file
 You begin listening on the receiving machine on TCP port 9999. The ‘>‘ tells the machine you are expecting a file to be transferred. The name that follows is the local name for the file.
 
 ### Set up the Mac PC to Send
+
 nc 172.20.1.168 9999 < toLinux.file
 The IP address here belongs to the Linux machine. You flip the symbol to ‘<‘ and the file ‘toLinux.file’ will be copied onto the remote machine as ‘fromMac.file’.
 
 ## 4. Use nc command for port scanning
+
 There might be more efficient options for port scanning, but it can be done with netcat. Since netcat comes installed by default on most operating systems, it’s nice to know how to do this if you need to do some quick troubleshooting. You’ll use the ‘-n’ and display verbose output.
 
 ``` bash
@@ -106,12 +114,15 @@ Content-Type: text/html; charset=iso-8859-1
 ```
 
 ### Zero I/O Mode
+
 To avoid this, you can use the -z flag, which stands for zero input/output. This is the built-in port-scanning mode for netcat. I still get the same language, but it does not actually make the connection to port 80 generating the bad request error. Instead it continues through all scanned ports.
 
 ## 5. Chat with Netcat
+
 This is a more fun way to use netcat. When you establish a TCP connection like above, you can actually “chat” from machine to machine. It’s less novel in an era where texting and chat applications are ubiquitous but this would have totally blown someone’s mind back in 1996.
 
 ### Bonus Tip: Create a backdoor with nc command
+
 I will show this for demonstration purposes only. Please be aware that unauthorized use of this command could be considered criminal activity in your locale.
 
 In fact, this command no longer does anything with ‘nc’. There are ways to do it, but you will have to find them somewhere else. Once again, this is intended only to show the capability.
