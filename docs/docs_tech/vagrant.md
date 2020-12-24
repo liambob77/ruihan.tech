@@ -36,7 +36,7 @@ vagrant package
 
 2、当前目录就会生成package.box，之后新建虚拟机则可使用这个box。
 
-```javascript 
+```javascript
 vagrant box add my_box ~/package.box
 vagrant init my_box
 vagrant up
