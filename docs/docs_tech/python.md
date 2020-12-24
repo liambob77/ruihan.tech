@@ -1,6 +1,10 @@
 # Python Notes
 
-## modify files
+---
+
+函数内代码执行效率更高
+
+## Modify files
 
 ``` python
 # 直接打开一个文件，如果文件不存在则创建文件
@@ -38,6 +42,13 @@ fp.next()
 fp.seek(offset[,whence])
 ```
 
+## Python magic method
+
+`__eq__`
+
+- Py3: used on all compare situayion
+- Py2: used only on equal sinatial
+
 ## Ipython magics
 
 ---
@@ -68,7 +79,7 @@ pytest -s
 pytest.main(args=['-s', os.path.abspath(__file__)])
 ```
 
-### json beautify
+### Json beautify
 
 - load 读取 file 转化, useful parameter: `object_hook`, `object_paris_hook`
 - loads 读取 str 转化
@@ -85,7 +96,7 @@ pytest.main(args=['-s', os.path.abspath(__file__)])
     f_json = json.dumps(o_json, indent = 3, sort_keys=False)
 ```
 
-### sqlachemy
+### Sqlachemy
 
 - check db connectable
 
@@ -96,13 +107,13 @@ db = create_engine(DEFAULT_URL)
 db.connect()
 ```
 
-### hashlib
+### Hashlib
 
 ``` python
 hashlib.md5('abc'.encode('utf-8').hexdigest()
 ```
 
-### traceback
+### Traceback
 
 ``` python
 def test_traceback():
@@ -116,3 +127,6 @@ def test_traceback():
     traceback.print_exc()
 ```
 
+### Selenium
+
+- css selector don't support #0
