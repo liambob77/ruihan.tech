@@ -256,9 +256,9 @@ Pivot data (with flexibility about what what becomes a column and what stays a r
 ```python
 pd.pivot_table(
   df,values='cell_value',
-  index=['col1', 'col2', 'col3'], #these stay as columns; will fail silently if any of these cols have null values
-  columns=['col4']) #data values in this column become their own column
- ```
+  index=['col1', 'col2', 'col3'], # these stay as columns; will fail silently if any of these cols have null values
+  columns=['col4']) # data values in this column become their own column
+```
 
 Concatenate two DataFrame columns into a new, single column  
 (useful when dealing with composite keys, for example)  
