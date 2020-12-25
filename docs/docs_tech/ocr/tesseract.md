@@ -27,7 +27,7 @@ tesseract --list-langs
 
 ### 获取样本文件
 
-画图打开，另存为tif文件 
+画图打开，另存为tif文件
 
 ### Merge样本文件
 
@@ -42,7 +42,7 @@ tesseract testlang.normal.exp0.tif -l chi_sim testlang.normal.exp0 makebox
 在目标文件夹内生成一个名为font_properties的文本文件，内容为  
 
 font 0 0 0 0 0
-【语法】：<fontname> <italic> <bold> <fixed> <serif> <fraktur>    
+【语法】：<fontname> <italic> <bold> <fixed> <serif> <fraktur>
 
 fontname为字体名称，italic为斜体，bold为黑体字，fixed为默认字体，serif为衬线字体，fraktur德文黑字体，1和0代表有和无，精细区分时可使用。  
 

@@ -27,7 +27,7 @@ Get everything ready to commit: `hg add`
 
 Commit removed files: `hg addremove`
 
-Commit changes: `hg commit -m "Message"` 
+Commit changes: `hg commit -m "Message"`
 (Use `--amend` to update previous commit or rewrite the previous commit message.)
 
 Only commit some files: `hg commit --include file1.txt --include file2.txt -m "Message"` (Short form: `-I`)
@@ -112,7 +112,6 @@ Check unpushed commits: `hg out`
 Backup project: `hg archive backup.zip`
 
 Create backup excluding .hg files: `hg archive project.tar.gz -X ".hg*"`
-
 
 Restore & Rollback
 
