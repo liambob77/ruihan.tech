@@ -1,0 +1,1278 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Liam_Bob">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>Python Notes - Ruihan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-GE9R8TL75Z","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="deep-purple">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-notes" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Ruihan" class="md-header-nav__button md-logo" aria-label="Ruihan">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Ruihan
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Python Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/liambob77/liambob77.github.io/" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    liambob77.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Welcome to Wu Ruihan Docs
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docs_cici/xessx01/" class="md-tabs__link">
+        Docs cici
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Docs python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docs_tech/Linux/" class="md-tabs__link">
+        Docs tech
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ruihan" class="md-nav__button md-logo" aria-label="Ruihan">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
+
+    </a>
+    Ruihan
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/liambob77/liambob77.github.io/" title="前往 GitHub 仓库" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    liambob77.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Welcome to Wu Ruihan Docs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Docs cici
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Docs cici" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Docs cici
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_cici/xessx01/" class="md-nav__link">
+      学而思2020（秋）一年级数学
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Docs python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Docs python" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Docs python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../" class="md-nav__link">
+      Python useful links
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../pandas/" class="md-nav__link">
+      Useful Pandas Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Python Notes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Python Notes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-files" class="md-nav__link">
+    Modify files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-magic-method" class="md-nav__link">
+    Python magic method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipython-magics" class="md-nav__link">
+    Ipython magics
+  </a>
+  
+    <nav class="md-nav" aria-label="Ipython magics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-magics" class="md-nav__link">
+    常用line magics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-magics" class="md-nav__link">
+    常用cell magics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-buildin-modules" class="md-nav__link">
+    Python buildin Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Python buildin Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashlib" class="md-nav__link">
+    Hashlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traceback" class="md-nav__link">
+    Traceback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-external-modules" class="md-nav__link">
+    Python external Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Python external Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    Pytest
+  </a>
+  
+    <nav class="md-nav" aria-label="Pytest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest-enable-logging-print" class="md-nav__link">
+    pytest enable logging print
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-beautify" class="md-nav__link">
+    Json beautify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlachemy" class="md-nav__link">
+    Sqlachemy
+  </a>
+  
+    <nav class="md-nav" aria-label="Sqlachemy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlalchemy" class="md-nav__link">
+    SQLALchemy 字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlalchemy_1" class="md-nav__link">
+    SQLALchemy 字段选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selenium" class="md-nav__link">
+    Selenium
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Docs tech
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Docs tech" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Docs tech
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/Linux/" class="md-nav__link">
+      Linux Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/git/" class="md-nav__link">
+      Git cheat list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/mercurial/" class="md-nav__link">
+      Mercurial Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/mysql/" class="md-nav__link">
+      mysql opr records
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/nice_tools/" class="md-nav__link">
+      Nice Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/ubuntu/" class="md-nav__link">
+      Ubuntu 16.04 Developer Tools Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/vagrant/" class="md-nav__link">
+      Vagrant Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-8" type="checkbox" id="nav-4-8" >
+    
+    <label class="md-nav__link" for="nav-4-8">
+      Network tools
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Network tools" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-8">
+        <span class="md-nav__icon md-icon"></span>
+        Network tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/network_tools/nc/" class="md-nav__link">
+      Netcat (nc) command examples
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-9" type="checkbox" id="nav-4-9" >
+    
+    <label class="md-nav__link" for="nav-4-9">
+      Ocr
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Ocr" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-9">
+        <span class="md-nav__icon md-icon"></span>
+        Ocr
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../docs_tech/ocr/tesseract/" class="md-nav__link">
+      tesseract OCR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify-files" class="md-nav__link">
+    Modify files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-magic-method" class="md-nav__link">
+    Python magic method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipython-magics" class="md-nav__link">
+    Ipython magics
+  </a>
+  
+    <nav class="md-nav" aria-label="Ipython magics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#line-magics" class="md-nav__link">
+    常用line magics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-magics" class="md-nav__link">
+    常用cell magics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-buildin-modules" class="md-nav__link">
+    Python buildin Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Python buildin Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hashlib" class="md-nav__link">
+    Hashlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traceback" class="md-nav__link">
+    Traceback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-external-modules" class="md-nav__link">
+    Python external Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Python external Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest" class="md-nav__link">
+    Pytest
+  </a>
+  
+    <nav class="md-nav" aria-label="Pytest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pytest-enable-logging-print" class="md-nav__link">
+    pytest enable logging print
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-beautify" class="md-nav__link">
+    Json beautify
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlachemy" class="md-nav__link">
+    Sqlachemy
+  </a>
+  
+    <nav class="md-nav" aria-label="Sqlachemy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sqlalchemy" class="md-nav__link">
+    SQLALchemy 字段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlalchemy_1" class="md-nav__link">
+    SQLALchemy 字段选项
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selenium" class="md-nav__link">
+    Selenium
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/liambob77/liambob77.github.io/edit/master/docs/docs_python/python.md" title="编辑此页" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="python-notes">Python Notes<a class="headerlink" href="#python-notes" title="Permanent link">&para;</a></h1>
+<hr />
+<p>函数内代码执行效率更高</p>
+<h2 id="modify-files">Modify files<a class="headerlink" href="#modify-files" title="Permanent link">&para;</a></h2>
+<pre><code class="language-python"># 直接打开一个文件，如果文件不存在则创建文件
+# w：以写方式打开，
+# a：以追加模式打开 (从 EOF 开始, 必要时创建新文件)
+# r+：以读写模式打开
+# w+：以读写模式打开 (参见 w )
+# a+：以读写模式打开 (参见 a )
+# rb：以二进制读模式打开
+# wb：以二进制写模式打开 (参见 w )
+# ab：以二进制追加模式打开 (参见 a )
+# rb+：以二进制读写模式打开 (参见 r+ )
+# wb+：以二进制读写模式打开 (参见 w+ )
+# ab+：以二进制读写模式打开 (参见 a+ )
+fp = open(&quot;test.txt&quot;,w)
+# size为读取的长度，以byte为单位
+fp.read([size])
+# 读一行，如果定义了size，有可能返回的只是一行的一部分
+fp.readline([size])
+fp.readlines([size])
+# 把str写到文件中，write()并不会在str后加上一个换行符
+fp.write(str) 
+fp.writelines(seq)
+# 把缓冲区的内容写入硬盘
+fp.flush() 
+# 返回一个长整型的&quot;文件标签&quot;
+fp.fileno() 
+# 文件是否是一个终端设备文件(unix系统中的)
+fp.isatty() 
+# 返回文件操作标记的当前位置，以文件的开头为原点
+fp.tell()
+# 返回下一行
+fp.next() 
+# 将文件打操作标记移到offset的位置
+fp.seek(offset[,whence])
+</code></pre>
+<h2 id="python-magic-method">Python magic method<a class="headerlink" href="#python-magic-method" title="Permanent link">&para;</a></h2>
+<p><code>__eq__</code></p>
+<ul>
+<li>Py3: used on all compare situayion</li>
+<li>Py2: used only on equal sinatial</li>
+</ul>
+<h2 id="ipython-magics">Ipython magics<a class="headerlink" href="#ipython-magics" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="line-magics">常用line magics<a class="headerlink" href="#line-magics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>%lsmagic</li>
+<li>%pdoc</li>
+<li>%pdef</li>
+<li>%psource</li>
+<li>%pfile</li>
+<li>%timeit
+    -n 单词循环中执行的次数
+    -r 执行循环的次数</li>
+</ul>
+<h3 id="cell-magics">常用cell magics<a class="headerlink" href="#cell-magics" title="Permanent link">&para;</a></h3>
+<h2 id="python-buildin-modules">Python buildin Modules<a class="headerlink" href="#python-buildin-modules" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="logging">logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
+<p>logging lib 包含 4 个主要对象</p>
+<ul>
+<li>
+<p>logger:logger 是程序信息输出的接口。它分散在不同的代码中使得程序可以在运行的时候记录相应的信息，并根据设置的日志级别或 filter 来决定哪些信息需要输出并将这些信息分发到其关联的 handler。常用的方法有 Logger.setLevel()，Logger.addHandler() ，Logger.removeHandler() ，Logger.addFilter() ，Logger.debug(), Logger.info(), Logger.warning(), Logger.error()，getLogger() 等。logger 支持层次继承关系，子 logger 的名称通常是父 logger.name 的方式。如果不创建 logger 的实例，则使用默认的 root logger，通过 logging.getLogger() 或者 logging.getLogger(&ldquo;&rdquo;) 得到 root logger 实例。</p>
+</li>
+<li>
+<p>Handler:Handler 用来处理信息的输出，可以将信息输出到控制台，文件或者网络。可以通过 Logger.addHandler() 来给 logger 对象添加 handler，常用的 handler 有 StreamHandler 和 FileHandler 类。StreamHandler 发送错误信息到流，而 FileHandler 类用于向文件输出日志信息，这两个 handler 定义在 logging 的核心模块中。其他的 hander 定义在 logging.handles 模块中，如 HTTPHandler,SocketHandler。</p>
+</li>
+<li>
+<p>Formatter:Formatter 则决定了 log 信息的格式 , 格式使用类似于 %(&lt; dictionary key &gt;)s 的形式来定义，如&rsquo;%(asctime)s - %(levelname)s - %(message)s&rsquo;，支持的 key 可以在 python 自带的文档 LogRecord attributes 中查看。</p>
+</li>
+<li>
+<p>Filter:Filter 用来决定哪些信息需要输出。可以被 handler 和 logger 使用，支持层次关系，比如如果设置了 filter 为名称为 A.B 的 logger，则该 logger 和其子 logger 的信息会被输出，如 A.B,A.B.C.</p>
+</li>
+</ul>
+<pre><code class="language-python">import logging
+logging_format = &quot;[%(asctime)s] %(process)d-%(levelname)s &quot;
+logging_format += &quot;%(module)s::%(funcName)s():1%(lineno)d: &quot;
+logging_formater = logging.Formatter(logging_format)
+filehandler = logging.FileHandler('test.log','a') 
+filter=logging.Filter('b') 
+filehandler.addFilter(filter)
+logger = logging.getLogger(&quot;Operate&quot;)
+logger.addHandler(filehandler)
+logger.setLevel(logging.DEBUG)
+logger.debug('it is a debug info')
+</code></pre>
+<h3 id="hashlib">Hashlib<a class="headerlink" href="#hashlib" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">hashlib.md5('abc'.encode('utf-8').hexdigest()
+</code></pre>
+<h3 id="traceback">Traceback<a class="headerlink" href="#traceback" title="Permanent link">&para;</a></h3>
+<pre><code class="language-python">def test_traceback():
+    import traceback
+    # 返回调用堆栈（一个list），最多两层， 其中最后一个元素为当前行的信息，包括（文件名，行号，函数名，这一行的代码）
+    info = traceback.extract_stack(limit=2)
+    print(info)
+    # 打印函数调用堆栈
+    traceback.print_stack(limit=2)
+    # 无异常时为None
+    traceback.print_exc()
+</code></pre>
+<h2 id="python-external-modules">Python external Modules<a class="headerlink" href="#python-external-modules" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="pytest">Pytest<a class="headerlink" href="#pytest" title="Permanent link">&para;</a></h3>
+<h4 id="pytest-enable-logging-print">pytest enable logging print<a class="headerlink" href="#pytest-enable-logging-print" title="Permanent link">&para;</a></h4>
+<pre><code class="language-bash">pytest -s
+pytest.main(args=['-s', os.path.abspath(__file__)])
+</code></pre>
+<h3 id="json-beautify">Json beautify<a class="headerlink" href="#json-beautify" title="Permanent link">&para;</a></h3>
+<ul>
+<li>load 读取 file 转化, useful parameter: <code>object_hook</code>, <code>object_paris_hook</code></li>
+<li>loads 读取 str 转化</li>
+<li>dump 转化py 对象成 file, useful parameter: <code>indent</code></li>
+<li>dumps 转换py 对象成json str</li>
+</ul>
+<pre><code class="language-python">    s_json = &quot;&quot;&quot;[{&quot;name&quot;: &quot;John&quot;,&quot;address&quot;: {&quot;street&quot;: &quot;8 bit avenue&quot;,
+                &quot;zip&quot;: &quot;94444&quot;, &quot;city&quot;: &quot;San Jose&quot;}},
+                {&quot;name&quot;: &quot;Chris&quot;,&quot;address&quot;: {&quot;street&quot;: &quot;4 bit avenue&quot;,
+                &quot;zip&quot;: &quot;95555&quot;, &quot;city&quot;: &quot;Milpitas&quot;}}]&quot;&quot;&quot;
+
+    o_json = json.loads(s_json)
+    f_json = json.dumps(o_json, indent = 3, sort_keys=False)
+</code></pre>
+<h3 id="sqlachemy">Sqlachemy<a class="headerlink" href="#sqlachemy" title="Permanent link">&para;</a></h3>
+<h4 id="sqlalchemy">SQLALchemy 字段<a class="headerlink" href="#sqlalchemy" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>类型名</th>
+<th>python类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td>int</td>
+<td>普通整数，32位</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>float</td>
+<td>浮点数</td>
+</tr>
+<tr>
+<td>String</td>
+<td>str</td>
+<td>变长字符串</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>str</td>
+<td>变长字符串，对较长字符串做了优化</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>bool</td>
+<td>布尔值</td>
+</tr>
+<tr>
+<td>Pickle</td>
+<td>Type</td>
+<td>任何python对象  自动使用Pickle序列化</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sqlalchemy_1">SQLALchemy 字段选项<a class="headerlink" href="#sqlalchemy_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>选项名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>primarykey</td>
+<td>如果设为True，表示主键</td>
+</tr>
+<tr>
+<td>unique</td>
+<td>如果设为True，这列不重复</td>
+</tr>
+<tr>
+<td>index</td>
+<td>如果设为True，创建索引，提升查询效率</td>
+</tr>
+<tr>
+<td>nullable</td>
+<td>如果设为True，允许空值</td>
+</tr>
+<tr>
+<td>default</td>
+<td>为这列定义默认值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>check db connectable</li>
+</ul>
+<pre><code class="language-python">from sqlalchemy import MetaData, Table, create_engine
+DEFAULT_URL = &quot;mysql://wl:wl@localhost:3306/wl&quot;
+db = create_engine(DEFAULT_URL)
+db.connect()
+</code></pre>
+<h3 id="selenium">Selenium<a class="headerlink" href="#selenium" title="Permanent link">&para;</a></h3>
+<ul>
+<li>css selector don&rsquo;t support #0</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../pandas/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                Useful Pandas Notes
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../docs_tech/Linux/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                Linux Notes
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2020 Liam_Bob
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="" target="_blank" rel="noopener" title="Liam_Bob on weixin" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154zm-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4zm-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2zM563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4zm-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6zm107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'search.highlight', 'search.suggest', 'header.autohide'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
