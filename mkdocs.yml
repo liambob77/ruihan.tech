@@ -22,6 +22,7 @@ theme:
         - rust
     icon:
         logo: logo
+    favicon: images/favicon.png
 repo_url: https://github.com/liambob77/liambob77.github.io/
 repo_name: liambob77.github.io
 site_author: Liam_Bob
