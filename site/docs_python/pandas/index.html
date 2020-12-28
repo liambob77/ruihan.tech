@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -11,16 +11,16 @@
         <meta name="author" content="Liam_Bob">
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>Useful Pandas Notes - Ruihan</title>
+        <title>Useful Pandas Notes - Rui's Blog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -45,15 +45,8 @@
     
       
         
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GE9R8TL75Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GE9R8TL75Z');
-</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-GE9R8TL75Z","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
@@ -76,7 +69,7 @@
       
         
         <a href="#useful-pandas-notes" class="md-skip">
-          跳转至
+          Skip to content
         </a>
       
     </div>
@@ -88,7 +81,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="Ruihan" class="md-header-nav__button md-logo" aria-label="Ruihan">
+    <a href="../.." title="Rui&#39;s Blog" class="md-header-nav__button md-logo" aria-label="Rui's Blog">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
@@ -101,7 +94,7 @@
       <div class="md-header-nav__ellipsis">
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
-            Ruihan
+            Rui's Blog
           </span>
         </div>
         <div class="md-header-nav__topic">
@@ -122,7 +115,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -135,7 +128,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -147,7 +140,7 @@
     
       <div class="md-header-nav__source">
         
-<a href="https://github.com/liambob77/liambob77.github.io/" title="前往 GitHub 仓库" class="md-source">
+<a href="https://github.com/liambob77/liambob77.github.io/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -177,7 +170,7 @@
 
   <li class="md-tabs__item">
     <a href="../.." class="md-tabs__link">
-      Welcome to Wu Ruihan Docs
+      Welcome to Rui's Blog
     </a>
   </li>
 
@@ -254,18 +247,18 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Ruihan" class="md-nav__button md-logo" aria-label="Ruihan">
+    <a href="../.." title="Rui&#39;s Blog" class="md-nav__button md-logo" aria-label="Rui's Blog">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89"><path d="M3.136 17.387v42.932l42.932 21.467L3.136 17.387z"/><path d="M21.91 8l42.933 64.398-18.775 9.388L3.136 17.387 21.91 8z" fill-opacity=".5"/><path d="M67.535 17.387L40.273 35.543l21.878 32.818 5.384 2.691V17.387z"/><path d="M67.535 17.387v53.666l18.774-9.388V8l-18.774 9.387z" fill-opacity=".25"/></svg>
 
     </a>
-    Ruihan
+    Rui's Blog
   </label>
   
     <div class="md-nav__source">
       
-<a href="https://github.com/liambob77/liambob77.github.io/" title="前往 GitHub 仓库" class="md-source">
+<a href="https://github.com/liambob77/liambob77.github.io/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
@@ -286,7 +279,7 @@
 
   <li class="md-nav__item">
     <a href="../.." class="md-nav__link">
-      Welcome to Wu Ruihan Docs
+      Welcome to Rui's Blog
     </a>
   </li>
 
@@ -397,7 +390,7 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
@@ -405,7 +398,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
@@ -699,7 +692,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
@@ -707,7 +700,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
@@ -772,7 +765,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/liambob77/liambob77.github.io/edit/master/docs/docs_python/pandas.md" title="编辑此页" class="md-content__button md-icon">
+                  <a href="https://github.com/liambob77/liambob77.github.io/edit/master/docs/docs_python/pandas.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -781,331 +774,487 @@
 <p>A personal diary of DataFrame munging over the years.</p>
 <h2 id="data-types-and-conversion">Data Types and Conversion<a class="headerlink" href="#data-types-and-conversion" title="Permanent link">&para;</a></h2>
 <p>Convert Series datatype to numeric (will error if column has non-numeric values)  </p>
-<pre><code class="language-python">df['col'] = pd.to_numeric(df['col'])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Convert Series datatype to numeric, getting rid of any non-numeric values  </p>
-<pre><code class="language-python">df['col'] = df['col'].astype(str).convert_objects(convert_numeric=True)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">convert_objects</span><span class="p">(</span><span class="n">convert_numeric</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Convert Series datatype to numeric, changing  non-numeric values to NaN  </p>
-<pre><code class="language-python">df['col'] = pd.to_numeric(df['col'], errors='coerce')
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Convert Django queryset to DataFrame</p>
-<pre><code class="language-python">qs = DjangoModelName.objects.all()
-q = qs.values()
-df = pd.DataFrame.from_records(q)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">qs</span> <span class="o">=</span> <span class="n">DjangoModelName</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">qs</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Change data type of DataFrame column</p>
-<pre><code class="language-python">df['col'] = df.column_name = df.column_name.astype(np.int64)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">column_name</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="exploring-and-finding-data">Exploring and Finding Data<a class="headerlink" href="#exploring-and-finding-data" title="Permanent link">&para;</a></h2>
 <p>Get a report of all duplicate records in a DataFrame, based on specific columns</p>
-<pre><code class="language-python">dupes = df[df.duplicated(
-    ['col1', 'col2', 'col3'], keep=False)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dupes</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="s1">&#39;col3&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>List unique values in a DataFrame column  </p>
-<pre><code class="language-python">df['col'].unique()
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <p>For each unique value in a DataFrame column, get a frequency count</p>
-<pre><code class="language-python">df['col'].value_counts()
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where column = a specific value</p>
-<pre><code class="language-python">df = df.loc[df.column == 'somevalue']
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">column</span> <span class="o">==</span> <span class="s1">&#39;somevalue&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where column value is present in a list</p>
-<pre><code class="language-python">test_data = {'hi': 'yo', 'bye': 'later'}
-df = pd.DataFrame(list(d.items()), columns=['col1', 'col2'])
-valuelist = ['yo', 'heya']
-df[df.col2.isin(valuelist)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hi&#39;</span><span class="p">:</span> <span class="s1">&#39;yo&#39;</span><span class="p">,</span> <span class="s1">&#39;bye&#39;</span><span class="p">:</span> <span class="s1">&#39;later&#39;</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">])</span>
+<span class="n">valuelist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;yo&#39;</span><span class="p">,</span> <span class="s1">&#39;heya&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">col2</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">valuelist</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where column value is not present in a list</p>
-<pre><code class="language-python">test_data = {'hi': 'yo', 'bye': 'later'}
-df = pd.DataFrame(list(d.items()), columns=['col1', 'col2'])
-valuelist = ['yo', 'heya']
-df[~df.col2.isin(valuelist)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hi&#39;</span><span class="p">:</span> <span class="s1">&#39;yo&#39;</span><span class="p">,</span> <span class="s1">&#39;bye&#39;</span><span class="p">:</span> <span class="s1">&#39;later&#39;</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">])</span>
+<span class="n">valuelist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;yo&#39;</span><span class="p">,</span> <span class="s1">&#39;heya&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">col2</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">valuelist</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Select from DataFrame using criteria from multiple columns<br />
 (use <code>|</code> instead of <code>&amp;</code> to do an OR)</p>
-<pre><code class="language-python">newdf = df[(df['column_one']&gt;2004) &amp; (df['column_two']==9)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_one&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2004</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_two&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">9</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Loop through rows in a DataFrame<br />
 (if you must)</p>
-<pre><code class="language-python">for index, row in df.iterrows():
-    print (index, row['some column'])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;some column&#39;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Much faster way to loop through DataFrame rows if you can work with tuples  </p>
-<pre><code class="language-python">for row in df.itertuples():
-    print(row)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get top n for each group of columns in a sorted DataFrame<br />
 (make sure DataFrame is sorted first)</p>
-<pre><code class="language-python">top5 = df.groupby(
-    ['groupingcol1',
-    'groupingcol2']).head(5)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">top5</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;groupingcol1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;groupingcol2&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where specific column is null/notnull</p>
-<pre><code class="language-python">newdf = df[df['column'].isnull()]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Select from DataFrame using multiple keys of a hierarchical index</p>
-<pre><code class="language-python">df.xs(
-    ('index level 1 value','index level 2 value'),
-    level=('level 1','level 2'))
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;index level 1 value&#39;</span><span class="p">,</span><span class="s1">&#39;index level 2 value&#39;</span><span class="p">),</span>
+    <span class="n">level</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;level 1&#39;</span><span class="p">,</span><span class="s1">&#39;level 2&#39;</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
 <p>Slice values in a DataFrame column (aka Series)</p>
-<pre><code class="language-python">df.column.str[0:2]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get quick count of rows in a DataFrame</p>
-<pre><code class="language-python">len(df.index)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get length of data in a DataFrame column</p>
-<pre><code class="language-python">df.column_name.str.len()
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="updating-and-cleaning-data">Updating and Cleaning Data<a class="headerlink" href="#updating-and-cleaning-data" title="Permanent link">&para;</a></h2>
 <p>Delete column from DataFrame</p>
-<pre><code class="language-python">del df['column']
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;column&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Rename several DataFrame columns</p>
-<pre><code class="language-python">df = df.rename(columns = {
-    'col1 old name':'col1 new name',
-    'col2 old name':'col2 new name',
-    'col3 old name':'col3 new name',
-})
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;col1 old name&#39;</span><span class="p">:</span><span class="s1">&#39;col1 new name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col2 old name&#39;</span><span class="p">:</span><span class="s1">&#39;col2 new name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col3 old name&#39;</span><span class="p">:</span><span class="s1">&#39;col3 new name&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
 <p>Lower-case all DataFrame column names</p>
-<pre><code class="language-python">df.columns = map(str.lower, df.columns)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Even more fancy DataFrame column re-naming<br />
 lower-case all DataFrame column names (for example)</p>
-<pre><code class="language-python">df.rename(columns=lambda x: x.split('.')[-1], inplace=True)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Lower-case everything in a DataFrame column</p>
-<pre><code class="language-python">df.column_name = df.column_name.str.lower()
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column_name</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <p>Sort DataFrame by multiple columns</p>
-<pre><code class="language-python">df = df.sort_values(
-    ['col1','col2','col3'],ascending=[1,1,0])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span><span class="s1">&#39;col2&#39;</span><span class="p">,</span><span class="s1">&#39;col3&#39;</span><span class="p">],</span><span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Change all NaNs to None (useful before loading to a db)</p>
-<pre><code class="language-python">df = df.where((pd.notnull(df)), None)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">df</span><span class="p">)),</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>More pre-db insert cleanup&hellip;make a pass through the DataFrame, stripping whitespace from strings and changing any empty values to <code>None</code><br />
 (not especially recommended but including here b/c I had to do this in real life once)</p>
-<pre><code class="language-python">df = df.applymap(lambda x: str(x).strip() if len(str(x).strip()) else None)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get rid of non-numeric values throughout a DataFrame:</p>
-<pre><code class="language-python">for col in refunds.columns.values:
-  refunds[col] = refunds[col].replace(
-      '[^0-9]+.-', '', regex=True)
- ```
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">refunds</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+  <span class="n">refunds</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">refunds</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+      <span class="s1">&#39;[^0-9]+.-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+ <span class="err">```</span>
 
-Set DataFrame column values based on other column values  
+<span class="n">Set</span> <span class="n">DataFrame</span> <span class="n">column</span> <span class="n">values</span> <span class="n">based</span> <span class="n">on</span> <span class="n">other</span> <span class="n">column</span> <span class="n">values</span>  
 
-```python
-df.loc[(df['column1'] == some_value) &amp; (df['column2'] == some_other_value), ['column_to_change']] = new_value
-</code></pre>
+<span class="err">```</span><span class="n">python</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">some_value</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">some_other_value</span><span class="p">),</span> <span class="p">[</span><span class="s1">&#39;column_to_change&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">new_value</span>
+</code></pre></div>
+</td></tr></table>
 <p>Clean up missing values in multiple DataFrame columns</p>
-<pre><code class="language-python">df = df.fillna({
-    'col1': 'missing',
-    'col2': '99.999',
-    'col3': '999',
-    'col4': 'missing',
-    'col5': 'missing',
-    'col6': '99'
-})
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span>
+    <span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="s1">&#39;missing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="s1">&#39;99.999&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col3&#39;</span><span class="p">:</span> <span class="s1">&#39;999&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col4&#39;</span><span class="p">:</span> <span class="s1">&#39;missing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col5&#39;</span><span class="p">:</span> <span class="s1">&#39;missing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col6&#39;</span><span class="p">:</span> <span class="s1">&#39;99&#39;</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
 <p>Doing calculations with DataFrame columns that have missing values. In example below, swap in 0 for df[&lsquo;col1&rsquo;] cells that contain null.</p>
-<pre><code class="language-python">df['new_col'] = np.where(
-    pd.isnull(df['col1']), 0, df['col1']) + df['col2']
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_col&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">]),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col2&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Split delimited values in a DataFrame column into two new columns  </p>
-<pre><code class="language-python">df['new_col1'], df['new_col2'] = zip(
-    *df['original_col'].apply(
-        lambda x: x.split(': ', 1)))
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_col1&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_col2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;original_col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+</code></pre></div>
+</td></tr></table>
 <p>Collapse hierarchical column indexes</p>
-<pre><code class="language-python">df.columns = df.columns.get_level_values(0)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="reshaping-concatenating-and-merging-data">Reshaping, Concatenating, and Merging Data<a class="headerlink" href="#reshaping-concatenating-and-merging-data" title="Permanent link">&para;</a></h2>
 <p>Pivot data (with flexibility about what what becomes a column and what stays a row).  </p>
-<pre><code class="language-python">pd.pivot_table(
-  df,values='cell_value',
-  index=['col1', 'col2', 'col3'], # these stay as columns; will fail silently if any of these cols have null values
-  columns=['col4']) # data values in this column become their own column
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+  <span class="n">df</span><span class="p">,</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;cell_value&#39;</span><span class="p">,</span>
+  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="s1">&#39;col3&#39;</span><span class="p">],</span> <span class="c1"># these stay as columns; will fail silently if any of these cols have null values</span>
+  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col4&#39;</span><span class="p">])</span> <span class="c1"># data values in this column become their own column</span>
+</code></pre></div>
+</td></tr></table>
 <p>Concatenate two DataFrame columns into a new, single column<br />
 (useful when dealing with composite keys, for example)  </p>
-<pre><code class="language-python">df['newcol'] = df['col1'].astype(str) + df['col2'].astype(str)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;newcol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="display-and-formatting">Display and formatting<a class="headerlink" href="#display-and-formatting" title="Permanent link">&para;</a></h2>
 <p>Set up formatting so larger numbers aren&rsquo;t displayed in scientific notation  </p>
-<pre><code class="language-python">pd.set_option('display.float_format', lambda x: '%.3f' % x)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>To display with commas and no decimals</p>
-<pre><code class="language-python">pd.options.display.float_format = '{:,.0f}'.format
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="creating-dataframes">Creating DataFrames<a class="headerlink" href="#creating-dataframes" title="Permanent link">&para;</a></h2>
 <p>Create a DataFrame from a Python dictionary</p>
-<pre><code class="language-python">df = pd.DataFrame(list(a_dictionary.items()), columns = ['column1', 'column2'])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">a_dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;column1&#39;</span><span class="p">,</span> <span class="s1">&#39;column2&#39;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Convert Django queryset to DataFrame</p>
-<pre><code class="language-python">qs = DjangoModelName.objects.all()
-q = qs.values()
-df = pd.DataFrame.from_records(q)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">qs</span> <span class="o">=</span> <span class="n">DjangoModelName</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">qs</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>List unique values in a DataFrame column  </p>
-<pre><code class="language-python">pd.unique(df.column_name.ravel())
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where column has certain values</p>
-<pre><code class="language-python">valuelist = ['value1', 'value2', 'value3']
-df = df[df.column.isin(valuelist)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">valuelist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;value2&#39;</span><span class="p">,</span> <span class="s1">&#39;value3&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">column</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">valuelist</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where column doesn&rsquo;t have certain values</p>
-<pre><code class="language-python">value_list = ['value1', 'value2', 'value3']
-df = df[~df.column.isin(value_list)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">value_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;value1&#39;</span><span class="p">,</span> <span class="s1">&#39;value2&#39;</span><span class="p">,</span> <span class="s1">&#39;value3&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="o">.</span><span class="n">column</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">value_list</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Delete column from DataFrame</p>
-<pre><code class="language-python">del df['column']
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;column&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Select from DataFrame using criteria from multiple columns
     (use <code>|</code> instead of <code>&amp;</code> to do an OR)</p>
-<pre><code class="language-python">newdf = df[(df['column_one'] &gt; 2004) &amp; (df['column_two'] == 9)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_one&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2004</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_two&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">9</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Rename several DataFrame columns</p>
-<pre><code class="language-python">df = df.rename(columns={
-    'col1 old name': 'col1 new name',
-    'col2 old name': 'col2 new name',
-    'col3 old name': 'col3 new name',
-})
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;col1 old name&#39;</span><span class="p">:</span> <span class="s1">&#39;col1 new name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col2 old name&#39;</span><span class="p">:</span> <span class="s1">&#39;col2 new name&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col3 old name&#39;</span><span class="p">:</span> <span class="s1">&#39;col3 new name&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
 <p>Lower-case all DataFrame column names</p>
-<pre><code class="language-python">df.columns = map(str.lower, df.columns)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Even more fancy DataFrame column re-naming
     lower-case all DataFrame column names (for example)</p>
-<pre><code class="language-python">df.rename(columns=lambda x: x.split('.')[-1], inplace=True)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Loop through rows in a DataFrame
     (if you must)</p>
-<pre><code class="language-python">for index, row in df.iterrows():
-    print(index, row['some column'])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;some column&#39;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Much faster way to loop through DataFrame rows
     if you can work with tuples
     (h/t hughamacmullaniv)</p>
-<pre><code class="language-python">for row in df.itertuples():
-    print(row)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Next few examples show how to work with text data in Pandas.
     <a href="http://pandas.pydata.org/pandas-docs/stable/text.html">Full list of .str functions</a>
     Slice values in a DataFrame column (aka Series)</p>
-<pre><code class="language-python">df.column.str[0:2]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column</span><span class="o">.</span><span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Lower-case everything in a DataFrame column</p>
-<pre><code class="language-python">df.column_name = df.column_name.str.lower()
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column_name</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get length of data in a DataFrame column</p>
-<pre><code class="language-python">df.column_name.str.len()
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">len</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
 <p>Sort dataframe by multiple columns</p>
-<pre><code class="language-python">df = df.sort(['col1', 'col2', 'col3'], ascending=[1, 1, 0])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort</span><span class="p">([</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="s1">&#39;col3&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get top n for each group of columns in a sorted dataframe
     (make sure dataframe is sorted first)</p>
-<pre><code class="language-python">top5 = df.groupby(['groupingcol1', 'groupingcol2']).head(5)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">top5</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;groupingcol1&#39;</span><span class="p">,</span> <span class="s1">&#39;groupingcol2&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Grab DataFrame rows where specific column is null/notnull</p>
-<pre><code class="language-python">newdf = df[df['column'].isnull()]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Select from DataFrame using multiple keys of a hierarchical index</p>
-<pre><code class="language-python">df.xs(('index level 1 value', 'index level 2 value'), level=('level 1', 'level 2'))
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">xs</span><span class="p">((</span><span class="s1">&#39;index level 1 value&#39;</span><span class="p">,</span> <span class="s1">&#39;index level 2 value&#39;</span><span class="p">),</span> <span class="n">level</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;level 1&#39;</span><span class="p">,</span> <span class="s1">&#39;level 2&#39;</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
 <p>Change all NaNs to None (useful before
 loading to a db)</p>
-<pre><code class="language-python">df = df.where((pd.notnull(df)), None)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">df</span><span class="p">)),</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>More pre-db insert cleanup&hellip;make a pass through the dataframe, stripping whitespace
     from strings and changing any empty values to None
     (not especially recommended but including here b/c I had to do this in real life one time)</p>
-<pre><code class="language-python">df = df.applymap(lambda x: str(x).strip() if len(str(x).strip()) else None)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get quick count of rows in a DataFrame</p>
-<pre><code class="language-python">len(df.index)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Pivot data (with flexibility about what what
     becomes a column and what stays a row).
     Syntax works on Pandas &gt;= .14</p>
-<pre><code class="language-python">pd.pivot_table(
-  df,values='cell_value',
-  index=['col1', 'col2', 'col3'], -these stay as columns; will fail silently if any of these cols have null values
-  columns=['col4']) -data values in this column become their own column
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+  <span class="n">df</span><span class="p">,</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;cell_value&#39;</span><span class="p">,</span>
+  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="s1">&#39;col3&#39;</span><span class="p">],</span> <span class="o">-</span><span class="n">these</span> <span class="n">stay</span> <span class="k">as</span> <span class="n">columns</span><span class="p">;</span> <span class="n">will</span> <span class="n">fail</span> <span class="n">silently</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">these</span> <span class="n">cols</span> <span class="n">have</span> <span class="n">null</span> <span class="n">values</span>
+  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col4&#39;</span><span class="p">])</span> <span class="o">-</span><span class="n">data</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">column</span> <span class="n">become</span> <span class="n">their</span> <span class="n">own</span> <span class="n">column</span>
+</code></pre></div>
+</td></tr></table>
 <p>Change data type of DataFrame column</p>
-<pre><code class="language-python">df.column_name = df.column_name.astype(np.int64)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">column_name</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">column_name</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get rid of non-numeric values throughout a DataFrame:</p>
-<pre><code class="language-python">for col in refunds.columns.values:
-  refunds[col] = refunds[col].replace('[^0-9]+.-', '', regex=True)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">refunds</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+  <span class="n">refunds</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">refunds</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;[^0-9]+.-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Set DataFrame column values based on other column values (h/t: @mlevkov)</p>
-<pre><code class="language-python">df.loc[(df['column1'] == some_value) &amp; (df['column2'] == some_other_value), ['column_to_change']] = new_value
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column1&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">some_value</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;column2&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">some_other_value</span><span class="p">),</span> <span class="p">[</span><span class="s1">&#39;column_to_change&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">new_value</span>
+</code></pre></div>
+</td></tr></table>
 <p>Clean up missing values in multiple DataFrame columns</p>
-<pre><code class="language-python">df = df.fillna({
-    'col1': 'missing',
-    'col2': '99.999',
-    'col3': '999',
-    'col4': 'missing',
-    'col5': 'missing',
-    'col6': '99'
-})
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span>
+    <span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="s1">&#39;missing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="s1">&#39;99.999&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col3&#39;</span><span class="p">:</span> <span class="s1">&#39;999&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col4&#39;</span><span class="p">:</span> <span class="s1">&#39;missing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col5&#39;</span><span class="p">:</span> <span class="s1">&#39;missing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;col6&#39;</span><span class="p">:</span> <span class="s1">&#39;99&#39;</span>
+<span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
 <p>Concatenate two DataFrame columns into a new, single column
     (useful when dealing with composite keys, for example)</p>
-<pre><code class="language-python">df['newcol'] = df['col1'].map(str) + df['col2'].map(str)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;newcol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Doing calculations with DataFrame columns that have missing values
     In example below, swap in 0 for df[&lsquo;col1&rsquo;] cells that contain null</p>
-<pre><code class="language-python">df['new_col'] = np.where(pd.isnull(df['col1']),0,df['col1']) + df['col2']
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_col&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">]),</span><span class="mi">0</span><span class="p">,</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;col2&#39;</span><span class="p">]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Split delimited values in a DataFrame column into two new columns</p>
-<pre><code class="language-python">df['new_col1'], df['new_col2'] = zip(*df['original_col'].apply(lambda x: x.split(': ', 1)))
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_col1&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;new_col2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;original_col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+</code></pre></div>
+</td></tr></table>
 <p>Collapse hierarchical column indexes</p>
-<pre><code class="language-python">df.columns = df.columns.get_level_values(0)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_level_values</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <p>Create a DataFrame from a Python dictionary</p>
-<pre><code class="language-python">df = pd.DataFrame(list(a_dictionary.items()), columns = ['column1', 'column2'])
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">a_dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;column1&#39;</span><span class="p">,</span> <span class="s1">&#39;column2&#39;</span><span class="p">])</span>
+</code></pre></div>
+</td></tr></table>
 <p>Get a report of all duplicate records in a dataframe, based on specific columns</p>
-<pre><code class="language-python">dupes = df[df.duplicated(['col1', 'col2', 'col3'], keep=False)]
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">dupes</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">([</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="s1">&#39;col3&#39;</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
 <p>Set up formatting so larger numbers aren&rsquo;t displayed in scientific notation (h/t @thecapacity)</p>
-<pre><code class="language-python">pd.set_option('display.float_format', lambda x: '%.3f' % x)
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="pandas-code-example">Pandas Code example<a class="headerlink" href="#pandas-code-example" title="Permanent link">&para;</a></h2>
-<pre><code class="language-python">import pandas as pd
-import numpy as np
-from sqlalchemy import create_engine
-engine = create_engine('mysql://root:xxx@127.0.0.1/lj?charset=utf8')
-house = pd.read_sql_table('example', engine)
-house_dd = pd.read_sql_query('select url, location, area, layout, size, buildtime, price, created from example group by url having count(url) &gt; 1', engine)
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mysql://root:xxx@127.0.0.1/lj?charset=utf8&#39;</span><span class="p">)</span>
+<span class="n">house</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_table</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">house_dd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s1">&#39;select url, location, area, layout, size, buildtime, price, created from example group by url having count(url) &gt; 1&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
 
-def strip(text):
-    try:
-        return text.strip()
-    except AttributeError:
-        return text
+<span class="k">def</span> <span class="nf">strip</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">text</span>
 
-def make_int(text):
-    return int(text.strip('&quot; '))
+<span class="k">def</span> <span class="nf">make_int</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot; &#39;</span><span class="p">))</span>
 
-df = pd.DataFrame()
-df1 = pd.read_csv('example.csv', sep=';')
-df2 = pd.read_csv('new.csv', dtype=str, index_col=False,
-                  usecols=['deal_num', 'acount', 'number'],
-                  converters = {'deal_num' : strip,
-                                    'acount' : strip,
-                                    'number' : make_int})
-</code></pre>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;example.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;new.csv&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;deal_num&#39;</span><span class="p">,</span> <span class="s1">&#39;acount&#39;</span><span class="p">,</span> <span class="s1">&#39;number&#39;</span><span class="p">],</span>
+                  <span class="n">converters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;deal_num&#39;</span> <span class="p">:</span> <span class="n">strip</span><span class="p">,</span>
+                                    <span class="s1">&#39;acount&#39;</span> <span class="p">:</span> <span class="n">strip</span><span class="p">,</span>
+                                    <span class="s1">&#39;number&#39;</span> <span class="p">:</span> <span class="n">make_int</span><span class="p">})</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
@@ -1131,7 +1280,7 @@ df2 = pd.read_csv('new.csv', dtype=str, index_col=False,
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
-                  上一页
+                  Previous
                 </span>
                 Python useful links
               </div>
@@ -1143,7 +1292,7 @@ df2 = pd.read_csv('new.csv', dtype=str, index_col=False,
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
-                  下一页
+                  Next
                 </span>
                 Python Notes
               </div>
@@ -1187,7 +1336,7 @@ df2 = pd.read_csv('new.csv', dtype=str, index_col=False,
     </div>
     
       <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

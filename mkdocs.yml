@@ -1,6 +1,7 @@
 site_name: Rui's Blog
 theme:
     name: material
+    custom_dir: overrides
     language: en
     features:
         - navigation.tabs
@@ -27,10 +28,16 @@ repo_url: https://github.com/liambob77/liambob77.github.io/
 repo_name: liambob77.github.io
 site_author: Liam_Bob
 markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+        linenums_style: pymdownx.inline
     - smarty
     - toc:
         permalink: True
     - sane_lists
+    - def_list
 plugins:
     - search:
         separator: '[\s\-\.]+'
