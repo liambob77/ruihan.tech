@@ -1,7 +1,7 @@
 site_name: Rui's Blog
 theme:
     name: material
-    language: zh
+    language: en
     features:
         - navigation.tabs
         - search.highlight
