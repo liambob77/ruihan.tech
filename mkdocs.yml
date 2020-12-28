@@ -1,4 +1,4 @@
-site_name: Ruihan
+site_name: Rui's Blog
 theme:
     name: material
     language: zh
@@ -42,4 +42,3 @@ extra:
 copyright: "Copyright &copy; 2018 - 2020 Liam_Bob"
 google_analytics:
   - G-GE9R8TL75Z
-  - auto
