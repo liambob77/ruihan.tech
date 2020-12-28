@@ -1,1 +1,3 @@
-# Welcome to Wu Ruihan Docs
+# Welcome to Rui's Blog
+
+[toc]
