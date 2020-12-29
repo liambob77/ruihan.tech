@@ -51,9 +51,7 @@ expect {
 }
 expect "#*"
 
-send "mv $SCUPB_BIN $SCUPB_BIN.bak;\r"
-send "mv $SCUPC_BIN $SCUPC_BIN.bak;\r"
-send "mv $SCUPH_BIN $SCUPH_BIN.bak;\r"
+send "mv $BIN $BIN.bak;\r"
 send "exit\r"
 expect eof
 
