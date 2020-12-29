@@ -10,7 +10,7 @@ enable xtrace for shell script
 - The `set -x` option instructs bash to print commands and their arguments as they are executed.
 - The `set -x` option instructs bash to print shell input lines as they are read.
 
-[Unofficial Bash Strict Mode]<http://redsymbol.net/articles/unofficial-bash-strict-mode/>
+[Unofficial Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/ "Title")
 
 - The `set -e` option instructs bash to immediately exit if any command has a non-zero exit status.
 - The `set -u` option instructs bash to immediately exit if a reference to any variable you haven't previously defined - with the exceptions of $* and $@.
@@ -34,4 +34,28 @@ split and print
 
 ```bash
 awk '{FS=","} {print $6}'
+```
+
+## expect example
+
+handle first time ssh login
+
+```bash
+expect <<EOF
+set timeout 10
+
+spawn ssh root@$TARGET_IP
+expect {
+    "Password" {send "$PWD\r";}
+    "yes/no" {send "yes\r";exp_continue}
+}
+expect "#*"
+
+send "mv $SCUPB_BIN $SCUPB_BIN.bak;\r"
+send "mv $SCUPC_BIN $SCUPC_BIN.bak;\r"
+send "mv $SCUPH_BIN $SCUPH_BIN.bak;\r"
+send "exit\r"
+expect eof
+
+EOF
 ```
