@@ -85,7 +85,7 @@ logging lib 包含 4 个主要对象
 ``` python
 import logging
 logging_format = "[%(asctime)s] %(process)d-%(levelname)s "
-logging_format += "%(module)s::%(funcName)s():1%(lineno)d: "
+logging_format += "%(module)s::%(funcName)s():1%(lineno)d: %(message)s"
 logging_formater = logging.Formatter(logging_format)
 filehandler = logging.FileHandler('test.log','a') 
 filter=logging.Filter('b') 
