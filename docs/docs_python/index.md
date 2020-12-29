@@ -4,5 +4,5 @@
 
 Python Markdown两大主力模块：
 
-- （https://python-markdown.github.io/）
-- （https://facelessuser.github.io/pymdown-extensions/）
+- <https://python-markdown.github.io/>
+- <https://facelessuser.github.io/pymdown-extensions/>
