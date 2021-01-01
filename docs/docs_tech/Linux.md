@@ -27,7 +27,6 @@ IFS=$'\n\t'
 export LC_ALL=C
 ```
 
-
 ## awk example
 
 split and print
