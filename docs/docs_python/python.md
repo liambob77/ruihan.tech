@@ -42,6 +42,66 @@ fp.next()
 fp.seek(offset[,whence])
 ```
 
+## Python `format` 字符串格式化
+
+```python
+使用位置参数
+li = ['hoho',18]
+'my name is {} ,age {}'.format(*li)
+'my name is hoho ,age 18'
+'my name is {1} ,age {0} {1}'.format(10,'hoho')
+'my name is hoho ,age 10 hoho'
+使用关键字参数
+hash = {'name':'hoho','age':18}
+'my name is {name},age is {age}'.format(name='hoho',age=19)
+'my name is hoho,age is 19'
+'my name is {name},age is {age}'.format(**hash)
+'my name is hoho,age is 18'
+填充与格式化
+'{0:>10}'.format(5)  # 右对齐
+'        5'
+'{0:<10}'.format(5)  # 左对齐
+'5        '
+'{0:^10}'.format(5)  # 居中对齐
+'    5    '
+'{0:*^10}'.format(5)  # 居中对齐，填充*
+'****5****'
+正负数显示
+'{:-} and {:-}'.fotmat(-3, 7) # 正数不显示加号
+-3 and 7
+'{:-} and {:-}'.fotmat(-3, 7) # 正数显示加号
+-3 and +7
+'{: } and {: }'.fotmat(-3, 7) # 正数前面加空格
+-3 and  7
+精度与进制
+'{0:.2f}'.format(1/3) # 浮点数 精度格式化, 两位精度
+0.33
+x = float('inf') # 大写浮点数格式化inf 和 nan 显示成 INF 和 NAN
+'{:F}'.format(x)
+INF
+'{0:b}'.format(10)    # 整数 二进制格式化
+1010
+'{0:o}'.format(10)     # 整数 八进制格式化
+12
+'{0:x}'.format(10)     # 整数 16进制格式化, 小写字母
+a
+'{0:X}'.format(10)     # 整数 16进制格式化, 大写字母
+A
+'{0:e}'.format(500)     # 科学记数 小写e
+5.000000e+02
+'{0:E}'.format(500)     # 科学记数 大写e
+5.000000E+02
+'{:,}'.format(13800000000)  # 千分位格式化，逗号
+13,800,000,000
+'{:_}'.format(13800000000)  # 千分位格式化，下划线
+13_800_000_000
+'{:%}'.format(0.25) # 百分比格式化
+25.000000%
+'{:.0%}'.format(0.25) # 百分比格式化，精度控制
+25%
+```
+
+
 ## Python magic method
 
 `__eq__`
