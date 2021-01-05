@@ -1,4 +1,4 @@
-# Useful Pandas Notes
+# Pandas
 
 A personal diary of DataFrame munging over the years.
 

@@ -114,23 +114,6 @@ time() # 时间戳
 - Py3: used on all compare situayion
 - Py2: used only on equal sinatial
 
-## Ipython magics
-
----
-
-### 常用line magics
-
-- %lsmagic
-- %pdoc
-- %pdef
-- %psource
-- %pfile
-- %timeit
-    -n 单词循环中执行的次数
-    -r 执行循环的次数
-
-### 常用cell magics
-
 ## Python buildin Modules
 
 ---
@@ -148,8 +131,10 @@ Out[7]: 'Tue Jan  5 16:58:57 CST 2021\n'
 ```
 
 ### subprocess
+
 运用对线程的控制和监控，将返回的结果赋于一变量，便于程序的处理。
 可用参数如下
+
 ```python
 subprocess.Popen(args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=False, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0)
 ```
@@ -161,32 +146,6 @@ p2 = subprocess.Popen('sort /R', shell=True, stdin=p1.stdout)
 print(p1.stdout.read())
 p1.stdout.close()
 out, err = p2.communicate() 
-```
-
-### logging
-
-logging lib 包含 4 个主要对象
-
-- logger:logger 是程序信息输出的接口。它分散在不同的代码中使得程序可以在运行的时候记录相应的信息，并根据设置的日志级别或 filter 来决定哪些信息需要输出并将这些信息分发到其关联的 handler。常用的方法有 Logger.setLevel()，Logger.addHandler() ，Logger.removeHandler() ，Logger.addFilter() ，Logger.debug(), Logger.info(), Logger.warning(), Logger.error()，getLogger() 等。logger 支持层次继承关系，子 logger 的名称通常是父 logger.name 的方式。如果不创建 logger 的实例，则使用默认的 root logger，通过 logging.getLogger() 或者 logging.getLogger("") 得到 root logger 实例。
-
-- Handler:Handler 用来处理信息的输出，可以将信息输出到控制台，文件或者网络。可以通过 Logger.addHandler() 来给 logger 对象添加 handler，常用的 handler 有 StreamHandler 和 FileHandler 类。StreamHandler 发送错误信息到流，而 FileHandler 类用于向文件输出日志信息，这两个 handler 定义在 logging 的核心模块中。其他的 hander 定义在 logging.handles 模块中，如 HTTPHandler,SocketHandler。
-
-- Formatter:Formatter 则决定了 log 信息的格式 , 格式使用类似于 %(< dictionary key >)s 的形式来定义，如'%(asctime)s - %(levelname)s - %(message)s'，支持的 key 可以在 python 自带的文档 LogRecord attributes 中查看。
-
-- Filter:Filter 用来决定哪些信息需要输出。可以被 handler 和 logger 使用，支持层次关系，比如如果设置了 filter 为名称为 A.B 的 logger，则该 logger 和其子 logger 的信息会被输出，如 A.B,A.B.C.
-
-``` python
-import logging
-logging_format = "[%(asctime)s] %(process)d-%(levelname)s "
-logging_format += "%(module)s::%(funcName)s():1%(lineno)d: %(message)s"
-logging_formater = logging.Formatter(logging_format)
-filehandler = logging.FileHandler('test.log','a') 
-filter=logging.Filter('b') 
-filehandler.addFilter(filter)
-logger = logging.getLogger("Operate")
-logger.addHandler(filehandler)
-logger.setLevel(logging.DEBUG)
-logger.debug('it is a debug info')
 ```
 
 ### Hashlib
@@ -209,19 +168,6 @@ def test_traceback():
     traceback.print_exc()
 ```
 
-## Python external Modules
-
----
-
-### Pytest
-
-#### pytest enable logging print
-
-``` bash
-pytest -s
-pytest.main(args=['-s', os.path.abspath(__file__)])
-```
-
 ### Json beautify
 
 - load 读取 file 转化, useful parameter: `object_hook`, `object_paris_hook`
@@ -238,39 +184,3 @@ pytest.main(args=['-s', os.path.abspath(__file__)])
     o_json = json.loads(s_json)
     f_json = json.dumps(o_json, indent = 3, sort_keys=False)
 ```
-
-### Sqlachemy
-
-#### SQLALchemy 字段
-
-| 类型名  | python类型 | 说明 |
-| ------- | ---------  | ------ |
-| Integer | int        | 普通整数，32位 |
-| Float   | float      | 浮点数 |
-| String  | str        | 变长字符串 |
-| Text    | str        | 变长字符串，对较长字符串做了优化 |
-| Boolean | bool       | 布尔值 |
-| Pickle  | Type       | 任何python对象  自动使用Pickle序列化 |
-
-#### SQLALchemy 字段选项
-
-| 选项名 | 说明 |
-| ---    |  --  |
-| primarykey |  如果设为True，表示主键 |
-| unique |  如果设为True，这列不重复 |
-| index |   如果设为True，创建索引，提升查询效率 |
-| nullable |    如果设为True，允许空值 |
-| default | 为这列定义默认值 |
-
-- check db connectable
-
-``` python
-from sqlalchemy import MetaData, Table, create_engine
-DEFAULT_URL = "mysql://wl:wl@localhost:3306/wl"
-db = create_engine(DEFAULT_URL)
-db.connect()
-```
-
-### Selenium
-
-- css selector don't support #0
