@@ -7,51 +7,36 @@
 ## Python 修改文件
 
 ```python
+文件打开模式
+# t: Text模式, 默认模式
+# b: 二进制模式， 比如图片
 打开一个文件，如果文件不存在则创建文件
-# w：以写方式打开，
-# a：以追加模式打开 (从 EOF 开始, 必要时创建新文件)
-# r+：以读写模式打开，保留文件原内容，文件操作标记指向文件头
+# w：以TEXT写方式打开，
+# a：以TEXT追加模式打开 (从 EOF 开始, 必要时创建新文件)
+# r+：以TEXT读写模式打开，保留文件原内容，文件操作标记指向文件头
 # w+：以读写模式打开，删除文件原内容，只能读后面写的
 # a+：以读写模式打开，保留文件原内容，文件操作标记指向文件尾
-# rb：以二进制读模式打开
-# wb：以二进制写模式打开
-# ab：以二进制追加模式打开
-# rb+：以二进制读写模式打开 (参见 r+ )
-# wb+：以二进制读写模式打开 (参见 w+ )
-# ab+：以二进制读写模式打开 (参见 a+ )
 创建一个文件，如果文件存在则报错
 # x: 文件存在就报错
 
 fp = open("test.txt", 'w')
-size为读取的长度，以byte为单位
-fp.read([size])
-读一行，如果定义了size，有可能返回的只是一行的一部分
-fp.readline([size])
+fp.read([size]) # size为读取的长度，以byte为单位
+fp.readline([size]) #读一行，如果定义了size，有可能返回的只是一行的一部分
 fp.readlines([size])
-把str写到文件中，write()并不会在str后加上一个换行符
-fp.write(str) 
+fp.write(str) # 把str写到文件中，write()并不会在str后加上一个换行符
 fp.writelines(seq)
-把缓冲区的内容写入硬盘
-fp.flush() 
-返回一个长整型的"文件标签"
-fp.fileno() 
-文件是否是一个终端设备文件(unix系统中的)
-fp.isatty() 
-返回文件操作标记的当前位置，以文件的开头为原点
-fp.tell()
-返回下一行
-fp.next() 
-# 将文件打操作标记移到offset的位置
-fp.seek(offset[,whence])
+fp.flush() # 把缓冲区的内容写入硬盘
+fp.fileno() # 返回一个长整型的"文件标签"
+fp.isatty() # 文件是否是一个终端设备文件(unix系统中的)
+fp.tell() # 返回文件操作标记的当前位置，以文件的开头为原点
+fp.next() # 返回下一行
+fp.seek(offset[,whence]) # 将文件打操作标记移到offset的位置
 
-下面操作都需要引入os模块
+文件目录操作，下面操作都需要引入os模块
 import os
-删除文件
-os.remove("file.txt")
-检查文件是否处在
-os.path.exists("demofile.txt")
-删除文件夹
-os.rmdir("myfolder")
+os.remove("file.txt") # 删除文件
+os.path.exists("demofile.txt") # 检查文件是否处在
+os.rmdir("myfolder") # 删除文件夹
 ```
 
 ## Python `format` 字符串格式化
@@ -112,7 +97,6 @@ A
 '{:.0%}'.format(0.25) # 百分比格式化，精度控制
 25%
 ```
-
 
 ## Python magic method
 
