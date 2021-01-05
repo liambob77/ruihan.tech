@@ -98,6 +98,15 @@ A
 25%
 ```
 
+## Python 日期和时间
+
+```Python
+from datetime import datetime
+datetime.now().strftime('%Y-%m-%d %H:%M:%S') # 输出常用时间格式
+from time import time
+time() # 时间戳
+```
+
 ## Python magic method
 
 `__eq__`
@@ -125,6 +134,34 @@ A
 ## Python buildin Modules
 
 ---
+
+### os
+
+```python
+In [1]: import os
+In [2]: os.system("date")  # 不仅执行命令而且返回执行后的信息对象(常用于需要获取执行命令后的返回信息)
+Tue Jan  5 16:58:02 CST 2021
+
+In [3]: nowtime = os.popen('date') # 打开一个管道运行文件，返回一个文件符，可以从中读取返回值
+In [7]: nowtime.read()
+Out[7]: 'Tue Jan  5 16:58:57 CST 2021\n'
+```
+
+### subprocess
+运用对线程的控制和监控，将返回的结果赋于一变量，便于程序的处理。
+可用参数如下
+```python
+subprocess.Popen(args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=False, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0)
+```
+
+```python
+import subprocess
+p1 = subprocess.Popen('dir', shell=True, stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p2 = subprocess.Popen('sort /R', shell=True, stdin=p1.stdout)
+print(p1.stdout.read())
+p1.stdout.close()
+out, err = p2.communicate() 
+```
 
 ### logging
 
