@@ -25,6 +25,10 @@
 - [pytesseract](https://github.com/madmaze/pytesseract)
 - [Captcha](https://github.com/ZYSzys/awesome-captcha)
 
+### robots.txt
+
+- [robots.txt 官方文档](http://www.robotstxt.org/)
+
 ## Python Markdown
 
 - [Python-markdown](https://python-markdown.github.io/)
