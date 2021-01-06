@@ -20,6 +20,11 @@
 
 - [chardet 官方文档](https://chardet.readthedocs.io/en/latest/index.html)
 
+### 图片识别
+
+- [pytesseract](https://github.com/madmaze/pytesseract)
+- [Captcha](https://github.com/ZYSzys/awesome-captcha)
+
 ## Python Markdown
 
 - [Python-markdown](https://python-markdown.github.io/)
