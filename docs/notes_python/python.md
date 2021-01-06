@@ -125,19 +125,40 @@ In [1]: import os
 In [2]: os.system("date")  # 不仅执行命令而且返回执行后的信息对象(常用于需要获取执行命令后的返回信息)
 Tue Jan  5 16:58:02 CST 2021
 
-In [3]: nowtime = os.popen('date') # 打开一个管道运行文件，返回一个文件符，可以从中读取返回值
+In [3]: nowtime = os.popen('date') # 打开一个管道运行文件，返回一个类文件对象，可以从中读取返回值
 In [7]: nowtime.read()
 Out[7]: 'Tue Jan  5 16:58:57 CST 2021\n'
 ```
 
 ### subprocess
 
-运用对线程的控制和监控，将返回的结果赋于一变量，便于程序的处理。
-可用参数如下
+生成新的进程，连接它们的输入、输出、错误管道，并且获取它们的返回码。  
+推荐用`subprocess.Popen`代替`os.popen`
+
+`run` Python3.5添加的函数, 可以参数如下:
 
 ```python
-subprocess.Popen(args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=False, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0)
+run(args, *, stdin=None, input=None, stdout=None, stderr=None, shell=False, timeout=None, check=False, encoding=None, errors=None) 
 ```
+
+对于高级子进程用法, 可以用`Popen`类, 可用参数如下:
+
+```python
+Popen(args, bufsize=0, executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=False, shell=False, cwd=None, env=None, universal_newlines=False, startupinfo=None, creationflags=0)
+```
+
+如果 shell 设为 True,，则使用 shell 执行指定的指令
+
+| 方法       | 说明 |
+| ---------- | -------------------- |
+| Popen.poll | 检查子进程是否已被终止 |
+| Popen.wait | 等待子进程被终止 |
+| Popen.communicate | 与进程交互 |
+| Popen.send_signal | 将信号发送给子进程 |
+| Popen.terminate | 停止子进程 |
+| Popen.kill | 杀死子进程 |
+
+Popen与进程交互例子
 
 ```python
 import subprocess
