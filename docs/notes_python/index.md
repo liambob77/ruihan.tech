@@ -12,12 +12,15 @@
 - [selenium 官方文档](https://www.selenium.dev/documentation/en/)
 - [selenium py 非官方文档](https://selenium-python.readthedocs.io/)
 
-### Python 非阻塞
+### 非阻塞
 
 - [aiohttp 官方文档](https://docs.aiohttp.org/en/stable/)
 
+### 二进制编码
+
+- [chardet 官方文档](https://chardet.readthedocs.io/en/latest/index.html)
+
 ## Python Markdown
 
-[Python-markdown](https://python-markdown.github.io/)
-
-[Pymdown](https://facelessuser.github.io/pymdown-extensions/)
+- [Python-markdown](https://python-markdown.github.io/)
+- [Pymdown](https://facelessuser.github.io/pymdown-extensions/)
