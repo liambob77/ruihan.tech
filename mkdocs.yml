@@ -16,7 +16,7 @@ theme:
     font:
         code: Roboto Mono
     palette:
-        scheme: slice
+        scheme: slate
         accent: purple
         primary: lime
 
