@@ -1,5 +1,9 @@
-site_name: Rui's Blog
+site_name: "Rui's website"
+repo_name: liambob77.github.io
+# repo_url: https://github.com/liambob77/liambob77.github.io/
 site_url: https://ruihan.tech/
+site_author: Liam_Bob
+
 theme:
     name: material
     custom_dir: overrides
@@ -12,22 +16,20 @@ theme:
     font:
         code: Roboto Mono
     palette:
-        accent: deep purple
-        primary: light blue
+        scheme: preference
+        accent: purple
+        primary: lime
 
     highlightjs: true
-    titles_only: 'true'
-    collapse_navigation: 'false'
-    prev_next_buttons_location: 'both'
+    titles_only: true
+    collapse_navigation: false
     hljs_languages:
         - yaml
         - rust
     icon:
         logo: logo
     favicon: images/favicon.ico
-repo_url: https://github.com/liambob77/liambob77.github.io/
-repo_name: liambob77.github.io
-site_author: Liam_Bob
+
 markdown_extensions:
     - pymdownx.highlight
     - pymdownx.superfences
@@ -36,7 +38,7 @@ markdown_extensions:
         linenums_style: pymdownx.inline
     - smarty
     - toc:
-        permalink: True
+        permalink: true
     - sane_lists
     - def_list
 plugins:
@@ -49,6 +51,7 @@ extra:
       name: Liam_Bob on weixin
       
 copyright: "Copyright &copy; 2018 - 2021 Liam_Bob"
+
 google_analytics:
   - G-GE9R8TL75Z
   - auto
