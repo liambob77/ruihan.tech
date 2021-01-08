@@ -1,11 +1,21 @@
-{% block disqus %}
-<hr>
-<script src="https://utteranc.es/client.js"
-        repo="liambob77/liambob77.github.io"
-        issue-term="pathname"
-        theme="boxy-light"
-        label="discus"
-        crossorigin="anonymous"
-        async>
-</script>
-{% endblock %}
+{% set disqus = config.extra.disqus %}
+{% if page and page.meta and page.meta.disqus is string %}
+  {% set disqus = page.meta.disqus %}
+{% endif %}
+
+{% if not page.is_homepage and disqus %}
+    {% block disqus %}
+    <hr>
+    <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+
+    <script src="https://utteranc.es/client.js"
+            repo="liambob77/liambob77.github.io"
+            issue-term="pathname"
+            theme="boxy-light"
+            label="discus"
+            crossorigin="anonymous"
+            async>
+    </script>
+    {% endblock %}
+
+{% endif %}
