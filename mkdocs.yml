@@ -31,7 +31,6 @@ theme:
     favicon: images/favicon.ico
 
 markdown_extensions:
-    - pymdownx.highlight
     - pymdownx.superfences
     - pymdownx.highlight:
         linenums: true
@@ -47,6 +46,8 @@ plugins:
 extra:
   disqus: true
   social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/liambob77
     - icon: fontawesome/brands/weixin
       name: Liam_Bob
     - icon: fontawesome/brands/linkedin
