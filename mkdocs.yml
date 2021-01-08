@@ -16,7 +16,7 @@ theme:
     font:
         code: Roboto Mono
     palette:
-        scheme: preference
+        scheme: slice
         accent: purple
         primary: lime
 
@@ -45,7 +45,7 @@ plugins:
     - search:
         separator: '[\s\-\.]+'
 extra:
-  generator: false
+  disqus: true
   social:
     - icon: fontawesome/brands/weixin
       name: Liam_Bob
