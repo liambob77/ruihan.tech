@@ -39,6 +39,14 @@ Configure Export directory
 [root@nfsserver ~]# exportfs -rv
 ```
 
+NFS Options
+
+- ro: With the help of this option we can provide read only access to the shared files i.e client will only be able to read.
+- rw: This option allows the client server to both read and write access within the shared directory.
+- sync: Sync confirms requests to the shared directory only once the changes have been committed.
+- no_subtree_check: This option prevents the subtree checking. When a shared directory is the subdirectory of a larger file system, nfs performs scans of every directory above it, in order to verify its permissions and details. Disabling the subtree check may increase the reliability of NFS, but reduce security.
+- no_root_squash: This phrase allows root to connect to the designated directory.
+
 Config firewall
 
 ```bash
@@ -55,9 +63,11 @@ Auto run after reboot
 [root@nfsserver ~]# systemctl enable rpcbind nfs-server
 ```
 
-Verify NFS configurations
+show NFS share
 
 ```bash
+[root@nfsserver ~]# showmount --exports
+[root@nfsserver ~]# exportfs -v
 [root@nfsserver ~]# cat /var/lib/nfs/etab
 ```
 
@@ -67,13 +77,12 @@ Restart NFS service
 [root@nfsserver ~]# systemctl restart rpcbind nfs-server
 ```
 
-NFS Options
+List NFS clients connected to NFS server
 
-- ro: With the help of this option we can provide read only access to the shared files i.e client will only be able to read.
-- rw: This option allows the client server to both read and write access within the shared directory.
-- sync: Sync confirms requests to the shared directory only once the changes have been committed.
-- no_subtree_check: This option prevents the subtree checking. When a shared directory is the subdirectory of a larger file system, nfs performs scans of every directory above it, in order to verify its permissions and details. Disabling the subtree check may increase the reliability of NFS, but reduce security.
-- no_root_squash: This phrase allows root to connect to the designated directory.
+```bash
+[root@nfsserver ~]# netstat -l | grep :nfs
+[root@nfsserver ~]# ss -a | grep :nfs
+```
 
 ### Setting Up the NFS Client
 
