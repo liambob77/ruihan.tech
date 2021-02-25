@@ -33,6 +33,14 @@ split and print
 
 ```bash
 awk '{FS=","} {print $6}'
+
+## Nice commands
+
+find files with same size, generate rm command to remove old same size file
+
+```bash
+for FILE in *; do stat -c"%s/%n" "$FILE"; done | awk -F/ '{if ($1 in a)print $2; else a[$1]=1}' | xargs echo rm
+```
 ```
 
 ## expect example
