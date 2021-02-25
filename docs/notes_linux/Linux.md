@@ -2,6 +2,15 @@
 
 > The normal settings for /tmp are 1777, which ls shows as drwxrwxrwt.
 > That is: wide open, except that only the owner of a file can remove it (that's what this extra t bit means for a directory).
+> 
+
+## Nice commands
+
+find files with same size, generate rm command to remove old same size file
+
+```bash
+for FILE in *; do stat -c"%s/%n" "$FILE"; done | awk -F/ '{if ($1 in a)print $2; else a[$1]=1}' | xargs echo rm
+```
 
 ## shell programing tips
 
@@ -33,14 +42,6 @@ split and print
 
 ```bash
 awk '{FS=","} {print $6}'
-
-## Nice commands
-
-find files with same size, generate rm command to remove old same size file
-
-```bash
-for FILE in *; do stat -c"%s/%n" "$FILE"; done | awk -F/ '{if ($1 in a)print $2; else a[$1]=1}' | xargs echo rm
-```
 ```
 
 ## expect example
