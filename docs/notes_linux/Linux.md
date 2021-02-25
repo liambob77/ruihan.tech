@@ -6,7 +6,8 @@
 
 ## Nice commands
 
-find files with same size, generate rm command to remove old same size file
+find duplicate files, generate rm command to remove old same size file
+to make it remove duplicates, remove echo from xargs.
 
 ```bash
 for FILE in *; do stat -c"%s/%n" "$FILE"; done | awk -F/ '{if ($1 in a)print $2; else a[$1]=1}' | xargs echo rm
