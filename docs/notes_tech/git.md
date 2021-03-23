@@ -343,3 +343,10 @@ git remote add upstream https://github.com/Microsoft/TypeScript.git
 git fetch upstream
 git rebase upstream/master
 ```
+
+add gitignore, stop tracking some ignore files
+
+```bash
+git rm -r --cached .
+git ci -m "update git ignore"
+```
