@@ -69,6 +69,13 @@ EOF
 
 ## coredump file check simple example
 
+to check where coredump file will be generate
+
+```bash
+cat /proc/sys/kernel/core_pattern
+
+```
+
 ```bash
 readelf -h core.21437 
 objdump86 -x core.21437 
