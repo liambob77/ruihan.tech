@@ -66,3 +66,12 @@ expect eof
 
 EOF
 ```
+
+## coredump file check simple example
+
+```bash
+readelf -h core.21437 
+objdump86 -x core.21437 
+objdump -x core.21437 
+gdb test core.21437 
+```
