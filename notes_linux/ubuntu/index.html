@@ -1,0 +1,1557 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Liam_Bob">
+      
+      
+        <link rel="canonical" href="https://ruihan.tech/notes_linux/ubuntu/">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+    
+    
+      
+        <title>Ubuntu 16.04 Developer Tools Installation - Rui's website</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.875de78c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#cbdc38">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+        
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GE9R8TL75Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GE9R8TL75Z');
+</script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="purple">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ubuntu-1604-developer-tools-installation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rui&#39;s website" class="md-header__button md-logo" aria-label="Rui's website" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rui's website
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ubuntu 16.04 Developer Tools Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Welcome to Rui's Blog
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Linux/" class="md-tabs__link md-tabs__link--active">
+        Notes linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../notes_python/" class="md-tabs__link">
+        Notes python
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../notes_tech/git/" class="md-tabs__link">
+        Notes tech
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rui&#39;s website" class="md-nav__button md-logo" aria-label="Rui's website" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Rui's website
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome to Rui's Blog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Notes linux
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Notes linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notes linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux/" class="md-nav__link">
+        Linux Notes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nfs/" class="md-nav__link">
+        how to setup NFS service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ubuntu 16.04 Developer Tools Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ubuntu 16.04 Developer Tools Installation
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-developer-tools" class="md-nav__link">
+    Standard Developer Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualbox-guest-utlities-for-shared-drive-and-clipboard-optional" class="md-nav__link">
+    Virtualbox Guest Utlities for Shared Drive and Clipboard (optional)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-development" class="md-nav__link">
+    Python Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Python Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualenv-wrapper-installation" class="md-nav__link">
+    Virtualenv Wrapper Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtualenv Wrapper Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-packages" class="md-nav__link">
+    pip packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiler-development" class="md-nav__link">
+    Compiler Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-tools" class="md-nav__link">
+    Networking tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision-or-image-processing-with-opencv" class="md-nav__link">
+    Computer Vision or Image Processing with OpenCV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-processing-with-openmpi" class="md-nav__link">
+    Parallel Processing with OpenMPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android-tools" class="md-nav__link">
+    Android tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-tools" class="md-nav__link">
+    Media tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-customization-theme-and-icons" class="md-nav__link">
+    Ubuntu Customization (Theme and Icons)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-zsh" class="md-nav__link">
+    Install ZSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-development-in-php-with-apache2-web-server" class="md-nav__link">
+    Web Development in PHP with Apache2 Web Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-development" class="md-nav__link">
+    Java Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruby-development" class="md-nav__link">
+    Ruby Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-development" class="md-nav__link">
+    NodeJs Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspnet-development" class="md-nav__link">
+    ASP.NET Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-storage-dropbox" class="md-nav__link">
+    CLoud Storage (Dropbox)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Notes python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Notes python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Notes python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/" class="md-nav__link">
+        Python useful links
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/celery/" class="md-nav__link">
+        Python distribute Celery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/ipython/" class="md-nav__link">
+        IPython Notes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/python/" class="md-nav__link">
+        Python Notes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/vscode_python/" class="md-nav__link">
+        Python vscode tips
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      <label class="md-nav__link" for="__nav_3_6">
+        Common modules
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Common modules" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Common modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/common_modules/logging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/common_modules/pandas/" class="md-nav__link">
+        Pandas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/common_modules/pytest/" class="md-nav__link">
+        Pytest
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/common_modules/selenium/" class="md-nav__link">
+        Selenium
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_python/common_modules/sqlalchemy/" class="md-nav__link">
+        Sqlachemy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Notes tech
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Notes tech" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Notes tech
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/git/" class="md-nav__link">
+        Git cheat list
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/javascript/" class="md-nav__link">
+        JS notes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/mercurial/" class="md-nav__link">
+        Mercurial Notes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/mysql/" class="md-nav__link">
+        mysql opr records
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/nice_tools/" class="md-nav__link">
+        Nice Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/robots/" class="md-nav__link">
+        Robots.txt
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/vagrant/" class="md-nav__link">
+        Vagrant Notes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      <label class="md-nav__link" for="__nav_4_8">
+        Network tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Network tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Network tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/network_tools/nc/" class="md-nav__link">
+        Netcat (nc) command examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      <label class="md-nav__link" for="__nav_4_9">
+        Ocr
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ocr" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Ocr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_tech/ocr/tesseract/" class="md-nav__link">
+        tesseract OCR
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#standard-developer-tools" class="md-nav__link">
+    Standard Developer Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualbox-guest-utlities-for-shared-drive-and-clipboard-optional" class="md-nav__link">
+    Virtualbox Guest Utlities for Shared Drive and Clipboard (optional)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-development" class="md-nav__link">
+    Python Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Python Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualenv-wrapper-installation" class="md-nav__link">
+    Virtualenv Wrapper Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtualenv Wrapper Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-packages" class="md-nav__link">
+    pip packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiler-development" class="md-nav__link">
+    Compiler Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-tools" class="md-nav__link">
+    Networking tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision-or-image-processing-with-opencv" class="md-nav__link">
+    Computer Vision or Image Processing with OpenCV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-processing-with-openmpi" class="md-nav__link">
+    Parallel Processing with OpenMPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android-tools" class="md-nav__link">
+    Android tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-tools" class="md-nav__link">
+    Media tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor" class="md-nav__link">
+    Editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-customization-theme-and-icons" class="md-nav__link">
+    Ubuntu Customization (Theme and Icons)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-zsh" class="md-nav__link">
+    Install ZSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-development-in-php-with-apache2-web-server" class="md-nav__link">
+    Web Development in PHP with Apache2 Web Server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-development" class="md-nav__link">
+    Java Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruby-development" class="md-nav__link">
+    Ruby Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-development" class="md-nav__link">
+    NodeJs Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspnet-development" class="md-nav__link">
+    ASP.NET Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-storage-dropbox" class="md-nav__link">
+    CLoud Storage (Dropbox)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ubuntu-1604-developer-tools-installation">Ubuntu 16.04 Developer Tools Installation<a class="headerlink" href="#ubuntu-1604-developer-tools-installation" title="Permanent link">&para;</a></h1>
+<p>First things first !</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt upgrade
+</code></pre></div>
+</td></tr></table>
+<h2 id="standard-developer-tools">Standard Developer Tools<a class="headerlink" href="#standard-developer-tools" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt-get install build-essential git
+</code></pre></div>
+</td></tr></table>
+<h2 id="virtualbox-guest-utlities-for-shared-drive-and-clipboard-optional">Virtualbox Guest Utlities for Shared Drive and Clipboard (optional)<a class="headerlink" href="#virtualbox-guest-utlities-for-shared-drive-and-clipboard-optional" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install dkms build-essential linux-headers-<span class="sb">`</span>uname -r<span class="sb">`</span>
+sudo apt install virtualbox-guest-utils virtualbox-guest-dkms
+<span class="c1"># To access shared drive on nautilus folder</span>
+sudo addgroup &lt;YOUR USERNAME&gt; vboxsf
+</code></pre></div>
+</td></tr></table>
+<h2 id="python-development">Python Development<a class="headerlink" href="#python-development" title="Permanent link">&para;</a></h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt-get install python-dev python-pip python-virtualenv python-numpy python-matplotlib
+</code></pre></div>
+</td></tr></table>
+<h3 id="virtualenv-wrapper-installation">Virtualenv Wrapper Installation<a class="headerlink" href="#virtualenv-wrapper-installation" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo pip install virtualenvwrapper
+<span class="nb">echo</span> <span class="s2">&quot;source /usr/local/bin/virtualenvwrapper.sh&quot;</span> &gt;&gt; ~/.bashrc
+<span class="c1"># Create Virtualenv (env location is ~/.virtualenvs)</span>
+mkvirtualenv &lt;env_name&gt;
+<span class="c1"># select virtualenv</span>
+workon &lt;env_name&gt;
+</code></pre></div>
+</td></tr></table>
+<h4 id="pip-packages">pip packages<a class="headerlink" href="#pip-packages" title="Permanent link">&para;</a></h4>
+<p>For Machine Learning</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Create Virtualenv</span>
+mkvirtualenv ML
+<span class="c1"># Activate it</span>
+workon ML
+<span class="c1"># Install packages (if behinde proxy use pip install --proxy=&lt;proxy_address&gt;)</span>
+pip install scipy scikit-learn matplotlib jupyter pandas numpy tensorflow keras seaborn
+</code></pre></div>
+</td></tr></table>
+<p>For Web Development</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Create Virtualenv</span>
+mkvirtualenv web
+<span class="c1"># Activate it</span>
+workon web
+<span class="c1"># Install packages (if behinde proxy use pip install --proxy=&lt;proxy_address&gt;)</span>
+pip install django beautifulsoup4 requests ipython
+</code></pre></div>
+</td></tr></table>
+<h3 id="compiler-development">Compiler Development<a class="headerlink" href="#compiler-development" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install flex bison
+</code></pre></div>
+</td></tr></table>
+<h3 id="networking-tools">Networking tools<a class="headerlink" href="#networking-tools" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install libpcap-dev libnet1-dev rpcbind openssh-server nmap
+</code></pre></div>
+</td></tr></table>
+<h3 id="computer-vision-or-image-processing-with-opencv">Computer Vision or Image Processing with OpenCV<a class="headerlink" href="#computer-vision-or-image-processing-with-opencv" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install python-numpy
+<span class="nb">cd</span> ~
+<span class="c1"># Clone latest codebase for opencv (do git checkout for specific version)</span>
+git clone https://github.com/Itseez/opencv.git
+<span class="c1"># Clone opencv contrib plugins</span>
+git clone https://github.com/Itseez/opencv_contrib.git
+<span class="c1"># install prerequisites</span>
+sudo apt-get install cmake pkg-config libjpeg8-dev libtiff-dev libjasper-dev libpng12-dev libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfortran libopencv-dev build-essential checkinstall cmake pkg-config yasm libtiff5-dev libjpeg-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libxine2-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev python-dev python-numpy libtbb-dev libqt4-dev libgtk2.0-dev libfaac-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils ffmpeg libgphoto2-dev
+<span class="c1"># Start Build Process</span>
+<span class="nb">cd</span> opencv
+mkdir build
+<span class="nb">cd</span> build
+cmake -D <span class="nv">CMAKE_BUILD_TYPE</span><span class="o">=</span>RELEASE -D <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local -D <span class="nv">INSTALL_C_EXAMPLES</span><span class="o">=</span>ON -D <span class="nv">INSTALL_PYTHON_EXAMPLES</span><span class="o">=</span>ON -D <span class="nv">OPENCV_EXTRA_MODULES_PATH</span><span class="o">=</span>../../opencv_contrib/modules -D <span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>ON -D <span class="nv">WITH_QT</span><span class="o">=</span>ON -D <span class="nv">WITH_OPENGL</span><span class="o">=</span>ON ..
+make -j4
+sudo make install
+sudo ldconfig
+</code></pre></div>
+</td></tr></table>
+<h3 id="parallel-processing-with-openmpi">Parallel Processing with OpenMPI<a class="headerlink" href="#parallel-processing-with-openmpi" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#install pre-requisites</span>
+sudo apt-get install libibnetdisc-dev
+<span class="c1"># download codebase</span>
+wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.2.tar.gz
+<span class="c1"># extract</span>
+tar -xzvf openmpi-1.10.2.tar.gz
+<span class="c1"># configure and build</span>
+./configure --prefix<span class="o">=</span><span class="s2">&quot;~/.openmpi&quot;</span>
+make -j4
+sudo make install
+<span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PATH</span><span class="s2">:</span><span class="nv">$HOME</span><span class="s2">/.openmpi/bin&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s2">&quot;export LD_LIBRARY_PATH=</span><span class="nv">$LD_LIBRARY_PATH</span><span class="s2">:</span><span class="nv">$HOME</span><span class="s2">/.openmpi/lib/&quot;</span> &gt;&gt; ~/.bashrc
+</code></pre></div>
+</td></tr></table>
+<h3 id="android-tools">Android tools<a class="headerlink" href="#android-tools" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install android-tools-adb android-tools-fastboot
+</code></pre></div>
+</td></tr></table>
+<h3 id="media-tools">Media tools<a class="headerlink" href="#media-tools" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install flashplugin-installer vlc ffmpeg
+</code></pre></div>
+</td></tr></table>
+<h3 id="editor">Editor<a class="headerlink" href="#editor" title="Permanent link">&para;</a></h3>
+<p>install vim</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install vim
+</code></pre></div>
+</td></tr></table>
+<p>Install Atom Editor <a href="https://github.com/atom/atom/releases/download/v1.23.3/atom-amd64.deb">download</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo dpkg -i atom-amd64.dev
+</code></pre></div>
+</td></tr></table>
+<p>Install Visual Studio Code <a href="https://code.visualstudio.com/docs/?dv=linux64_deb">download</a></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo dpkg -i code_&lt;version&gt;.deb
+</code></pre></div>
+</td></tr></table>
+<h3 id="ubuntu-customization-theme-and-icons">Ubuntu Customization (Theme and Icons)<a class="headerlink" href="#ubuntu-customization-theme-and-icons" title="Permanent link">&para;</a></h3>
+<p>Install Gnome Tweak Tool</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install gnome-tweak-tool
+
+<span class="c1"># Create Theme and Icon directory</span>
+mkdir ~/.icons ~/.themes
+</code></pre></div>
+</td></tr></table>
+<p>Download Themes and Icons, Place it under respective directory and open tweak tool select your themes</p>
+<p>Suggested Themes and</p>
+<ol>
+<li><a href="https://github.com/anmoljagetia/Flatabulous">Flatabulous</a></li>
+<li><a href="https://github.com/snwh/paper-gtk-theme">Paper-Theme</a></li>
+<li><a href="https://github.com/snwh/paper-icon-theme">Paper-Icon-Theme</a></li>
+</ol>
+<h3 id="install-zsh">Install ZSH<a class="headerlink" href="#install-zsh" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh <span class="p">|</span> sh
+chsh -s <span class="sb">`</span>which zsh<span class="sb">`</span>
+</code></pre></div>
+</td></tr></table>
+<h3 id="web-development-in-php-with-apache2-web-server">Web Development in PHP with Apache2 Web Server<a class="headerlink" href="#web-development-in-php-with-apache2-web-server" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">#Install apache2 and php</span>
+sudo apt install apache2 apache2-utils libapache2-mod-php
+sudo apt install php php-dev php-mcrypt php-mysql php-mbstring php-dom
+<span class="c1"># Enable mod_rewrite for apache2</span>
+sudo a2enmod rewrite
+</code></pre></div>
+</td></tr></table>
+<p>Configure index.php for priorities add index.php <code>sudo nano /etc/apache2/mods-available/dir.conf</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;IfModule mod_dir.c&gt;
+    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+&lt;/IfModule&gt;
+</code></pre></div>
+</td></tr></table>
+<p>Configure Mod Rewrite <code>sudo nano /etc/apache2/sites-available/000-default.conf</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+
+    &lt;Directory /var/www/html&gt;
+        Options FollowSymLinks MultiViews Indexes
+        AllowOverride All
+        Order allow,deny
+        allow from all
+    &lt;/Directory&gt;
+
+    ErrorLog <span class="si">${</span><span class="nv">APACHE_LOG_DIR</span><span class="si">}</span>/error.log
+    CustomLog <span class="si">${</span><span class="nv">APACHE_LOG_DIR</span><span class="si">}</span>/access.log combined
+&lt;/VirtualHost&gt;
+</code></pre></div>
+</td></tr></table>
+<p>Reload Apache <code>sudo service apache2 restart</code></p>
+<h3 id="java-development">Java Development<a class="headerlink" href="#java-development" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># install jdk</span>
+sudo apt install openjdk-8-jdk
+<span class="c1"># install maven</span>
+sudo apt install maven
+</code></pre></div>
+</td></tr></table>
+<p>Install eclipse <a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-java-oxygen-2-linux-gtk-x86_64.tar.gz">dowload</a></p>
+<h3 id="ruby-development">Ruby Development<a class="headerlink" href="#ruby-development" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># install pre requisites</span>
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
+<span class="c1"># clone rbenv</span>
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/rbenv/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+
+<span class="c1"># add configuration to bashrc</span>
+<span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$PATH</span><span class="s2">:</span><span class="nv">$HOME</span><span class="s2">/.rbenv/bin:</span><span class="nv">$HOME</span><span class="s2">/.rbenv/shims&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s2">&quot;eval </span><span class="k">$(</span>rbenv init -<span class="k">)</span><span class="s2">&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">echo</span> <span class="s2">&quot;export PATH=</span><span class="nv">$HOME</span><span class="s2">/.rbenv/plugins/ruby-build/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span> &gt;&gt; ~/.bashrc
+<span class="c1"># install and set specific ruby version</span>
+rbenv install <span class="m">2</span>.3.0
+rbenv global <span class="m">2</span>.3.0
+<span class="c1"># install some gems</span>
+gem install bundler jekyll mysql2 rails jekyll-pagedown
+</code></pre></div>
+</td></tr></table>
+<h3 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># install nosql database</span>
+sudo apt install mongodb-server
+<span class="c1"># install sqlite3 for smaller db</span>
+sudo apt install libsqlite3-dev sqlite3
+<span class="c1"># mysql community version installation</span>
+sudo apt install mysql-server libmysqlclient-dev
+</code></pre></div>
+</td></tr></table>
+<h3 id="nodejs-development">NodeJs Development<a class="headerlink" href="#nodejs-development" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>curl -sL https://deb.nodesource.com/setup_8.x <span class="p">|</span> sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install -g grunt-cli yarn @angular/cli
+</code></pre></div>
+</td></tr></table>
+<h3 id="aspnet-development">ASP.NET Development<a class="headerlink" href="#aspnet-development" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+<span class="nb">echo</span> <span class="s2">&quot;deb http://download.mono-project.com/repo/debian wheezy main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/mono-xamarin.list
+sudo apt update
+<span class="c1"># install mono libraries</span>
+sudo apt install mono-devel mono-complete referenceassemblies-pcl ca-certificates-mono mono-xsp4
+<span class="c1"># install mono ide</span>
+sudo apt install monodevelop-nunit monodevelop-versioncontrol monodevelop-database
+</code></pre></div>
+</td></tr></table>
+<h3 id="cloud-storage-dropbox">CLoud Storage (Dropbox)<a class="headerlink" href="#cloud-storage-dropbox" title="Permanent link">&para;</a></h3>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~ <span class="o">&amp;&amp;</span> wget -O - <span class="s2">&quot;https://www.dropbox.com/download?plat=lnx.x86_64&quot;</span> <span class="p">|</span> tar xzf -
+<span class="c1"># to start dropbox</span>
+sh ~/.dropbox-dist/dropboxd
+</code></pre></div>
+</td></tr></table>
+                
+              
+              
+                
+
+
+
+    
+    <hr>
+    <h3 id="__comments">Github based Comments, sign in Github required.</h3>
+
+    <script src="https://utteranc.es/client.js"
+            repo="liambob77/liambob77.github.io"
+            issue-term="pathname"
+            theme="github-dark-orange"
+            label="discus"
+            crossorigin="anonymous"
+            async>
+    </script>
+    
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../nfs/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              how to setup NFS service
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../notes_python/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Python useful links
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 - 2021 Liam_Bob
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/liambob77" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="" target="_blank" rel="noopener" title="Liam_Bob" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154zm-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4zm-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2zM563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4zm-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6zm107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.linkedin.com/in/defbobo" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.highlight", "search.suggest", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+      
+    
+  </body>
+</html>
