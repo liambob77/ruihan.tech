@@ -53,9 +53,8 @@ export LC_ALL=C
 
 Hint: These modes can be entered when calling Bash:
 
-from commandline: bash -vx ./myscript 
-
-from shebang (OS dependant): #!/bin/bash -vx 
+- from commandline: bash -vx ./myscript 
+- from shebang (OS dependant): #!/bin/bash -vx 
 
 ## awk example
 
