@@ -15,10 +15,24 @@ for FILE in *; do stat -c"%s/%n" "$FILE"; done | awk -F/ '{if ($1 in a)print $2;
 
 ## shell programing tips
 
-enable xtrace for shell script
+set -x mode (set -o xtrace), enable xtrace for shell script
 
-- The `set -x` option instructs bash to print commands and their arguments as they are executed.
-- The `set -x` option instructs bash to print shell input lines as they are read.
+- print everything as if it were executed, after substitution and expansion is applied
+- indicate the depth-level of the subshell (by default by prefixing a + (plus) sign to the displayed command)
+- indicate the recognized words after word splitting by marking them like 'x y'
+- in shell version 4.1, this debug output can be printed to a configurable file descriptor, rather than sdtout by setting the BASH_XTRACEFD variable.
+
+set -v mode (set -o verbose)
+- print commands to be executed to stderr as if they were read from input (script file or keyboard)
+- print everything before any ( substitution and expansion, …) is applied
+
+### Making xtrace print more
+
+xtrace output would be more useful if it contained source file and line number. Add this assignment PS4 at the beginning of your script to enable the inclusion of that information:
+
+```bash
+export PS4='+(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
+```
 
 [Unofficial Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/ "Title")
 
@@ -36,6 +50,11 @@ set -euo pipefail
 IFS=$'\n\t'
 export LC_ALL=C
 ```
+
+Hint: These modes can be entered when calling Bash:
+
+from commandline: bash -vx ./myscript
+from shebang (OS dependant): #!/bin/bash -vx
 
 ## awk example
 
