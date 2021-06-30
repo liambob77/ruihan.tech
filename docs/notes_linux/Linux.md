@@ -56,6 +56,29 @@ Hint: These modes can be entered when calling Bash:
 - from commandline: bash -vx ./myscript 
 - from shebang (OS dependant): #!/bin/bash -vx 
 
+### Inject debugging code
+
+Insert echos everywhere you can, and print to stderr:
+
+```bash
+echo "DEBUG: current i=$i" >&2
+```
+
+If you read input from anywhere, such as a file or command substitution, print the debug output with literal quotes, to see leading and trailing spaces!
+
+```bash
+pid=$(< fooservice.pid)
+echo "DEBUG: read from file: pid=\"$pid\"" >&2
+```
+
+Bash's printf command has the %q format, which is handy for verifying whether strings are what they appear to be.
+
+```bash
+foo=$(< inputfile)
+printf "DEBUG: foo is |%q|\n" "$foo" >&2
+# exposes whitespace (such as CRs, see below) and non-printing characters
+```
+
 ## awk example
 
 split and print
