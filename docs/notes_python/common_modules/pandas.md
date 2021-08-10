@@ -1,19 +1,62 @@
 # Pandas
 
-A personal diary of DataFrame munging over the years.
+## Data Types
 
-## Data Types and Conversion
+### dtypes
 
-Convert Series datatype to numeric (will error if column has non-numeric values)  
+DatetimeTZDtype, CategoricalDtype, PeriodDtype, SparseDtype, IntervalDtype, Int64Dtype, StringDtype, BooleanDtype
+
+Get `Dataframe` dtypes for each column and value counter
 
 ```python
-df['col'] = pd.to_numeric(df['col'])
+df.dtypes
+df.dtypes.value_counts()
 ```
+
+### defaults
+
+By default integer types are int64 and float types are float64, regardless of platform (32-bit or 64-bit)
+
+### astype
+
+astype() method may convert dtypes from one to another. These will by default return a copy, even if the dtype was unchanged (pass copy=False to change this behavior).
+
+Convert a subset of columns to a specified type using astype()
+
+```python
+df[["a", "b"]] = df[["a", "b"]].astype(np.uint8)
+```
+
+Convert certain columns to a specific dtype by passing a dict to astype()
+
+```python
+df = dfastype({"a": np.bool_, "c": np.float64})
+```
+
+note: loc() method tries to fit in what we are assigning to the current dtypes, while [] will overwrite them taking the dtype from the right hand side.
+
+### object conversion
+
+pandas has two ways to store strings.
+
+1. object dtype, which can hold any Python object, including strings.
+2. StringDtype, which is dedicated to strings.
+
+The infer_objects() methods can be used to soft convert to the correct type.
+
+```python
+df.infer_objects().dtypes
+```
+
+- to_numeric() (conversion to numeric dtypes)
+- to_datetime() (conversion to datetime objects)
+- to_timedelta() (conversion to timedelta objects)
 
 Convert Series datatype to numeric, getting rid of any non-numeric values  
 
 ```python
 df['col'] = df['col'].astype(str).convert_objects(convert_numeric=True)
+pd.to_datetime(df['col'], errors="ignore")
 ```
 
 Convert Series datatype to numeric, changing  non-numeric values to NaN  
@@ -22,18 +65,24 @@ Convert Series datatype to numeric, changing  non-numeric values to NaN
 df['col'] = pd.to_numeric(df['col'], errors='coerce')
 ```
 
-Convert Django queryset to DataFrame
+The to_numeric() provides another argument `downcast`, which gives the option of downcasting the newly (or already) numeric data to a smaller dtype, which can conserve memory
 
 ```python
-qs = DjangoModelName.objects.all()
-q = qs.values()
-df = pd.DataFrame.from_records(q)
+pd.to_numeric(m, downcast="integer")
 ```
 
-Change data type of DataFrame column
+As these methods apply only to one-dimensional arrays, lists or scalars; they cannot be used directly on multi-dimensional objects such as DataFrames. However, with apply(), we can `apply` the function over each column efficiently:
 
 ```python
-df['col'] = df.column_name = df.column_name.astype(np.int64)
+df.apply(pd.to_datetime)
+```
+
+### Selecting columns based on dtype
+
+select_dtypes() has two parameters include and exclude that allow you to say “give me the columns with these dtypes” (include) and/or “give the columns without these dtypes” (exclude).
+
+```python
+df.select_dtypes(include=["number", "bool"], exclude=["unsignedinteger"])
 ```
 
 ## Exploring and Finding Data
@@ -287,14 +336,6 @@ Create a DataFrame from a Python dictionary
 
 ```python
 df = pd.DataFrame(list(a_dictionary.items()), columns = ['column1', 'column2'])
-```
-
-Convert Django queryset to DataFrame
-
-```python
-qs = DjangoModelName.objects.all()
-q = qs.values()
-df = pd.DataFrame.from_records(q)
 ```
 
 List unique values in a DataFrame column  
