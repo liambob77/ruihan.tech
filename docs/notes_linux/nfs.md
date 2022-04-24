@@ -84,6 +84,19 @@ List NFS clients connected to NFS server
 [root@nfsserver ~]# ss -a | grep :nfs
 ```
 
+Enable idmapping on the client and server
+
+```bash
+[root@nfsserver ~]# echo N > /sys/module/nfsd/parameters/nfs4_disable_idmapping
+```
+
+Clean idmap cache and restart idmap daemon:
+
+```bash
+[root@nfsserver ~]# nfsidmap -c
+[root@nfsserver ~]# service rpcidmapd restart
+```
+
 ### Setting Up the NFS Client
 
 Mount Shared Directories on NFS Client
