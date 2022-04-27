@@ -150,3 +150,14 @@ To search and get the line number of the word in all the files
 To search and get only the file names that contain the word
 
 > grep -wirl /directory -e ‘techieshouts’
+
+## hostname
+
+To view the current hostname
+
+> # hostnamectl
+
+To change the system hostname
+
+> # hostnamectl set-hostname lin
+
