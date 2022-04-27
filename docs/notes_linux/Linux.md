@@ -155,9 +155,9 @@ To search and get only the file names that contain the word
 
 To view the current hostname
 
-> # hostnamectl
+> hostnamectl
 
 To change the system hostname
 
-> # hostnamectl set-hostname lin
+> hostnamectl set-hostname lin
 
