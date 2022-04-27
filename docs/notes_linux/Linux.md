@@ -171,4 +171,8 @@ To check the system runlevel
 In the above output, the letter 'N' indicates that the runlevel has not been changed since the system was booted.
 And, 3 is the current runlevel i.e the system is in CLI mode.
 
+Enable service auto run
+
+> chkconfig httpd on
+
 
