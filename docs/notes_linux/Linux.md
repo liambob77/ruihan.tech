@@ -161,3 +161,14 @@ To change the system hostname
 
 > hostnamectl set-hostname lin
 
+## Check the Runlevel In Linux (SysV init)
+
+To check the system runlevel
+
+> runlevel
+> N 3
+
+In the above output, the letter 'N' indicates that the runlevel has not been changed since the system was booted.
+And, 3 is the current runlevel i.e the system is in CLI mode.
+
+
