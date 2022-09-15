@@ -175,4 +175,23 @@ Enable service auto run
 
 > chkconfig httpd on
 
+## alias releate
+
+Aliases are not expanded when the shell is not interactive, unless the expand_aliases shell option is set using shopt.
+
+```bash
+# to enable alias
+shopt -s expand_aliases
+# to check alias
+shopt expand_aliases
+```
+
+## Yum
+
+```bash
+yum --disablerepo=epel -y update  ca-certificates
+yum update xxx
+yum search xxx
+alternatives --config xxx
+```
 
