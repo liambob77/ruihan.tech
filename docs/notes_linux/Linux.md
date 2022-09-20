@@ -151,6 +151,10 @@ To search and get only the file names that contain the word
 
 > grep -wirl /directory -e ‘techieshouts’
 
+To forces grep to print the file name
+
+> grep -H abc xxx.txt
+
 ## hostname
 
 To view the current hostname
