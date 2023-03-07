@@ -1,18 +1,18 @@
 ---
-title: 'how to setup NFS service'
+title: 'How to setup NFS service'
 date: '1/19/2021'
 authors: 'Liam bob'
-tags: Linux NFS
+tags: Linux
 ---
 
 ## Steps to setup NFS
 
 ### Installing NFS Server and NFS Client
 
-install
+Installing NFS Server Packages
 
 ```bash
-# “yum” (Red Hat Linux) as example：
+# On RedHat and Centos：
 [root@nfsserver ~]# yum install nfs-utils nfs-utils-lib
 [root@nfsserver ~]# yum install portmap (not required with NFSv4)
 ```
@@ -38,7 +38,7 @@ Configure Export directory
 
 ```bash
 [root@nfsserver ~]# mkdir /nfsshare
-[root@nfsserver ~]# chown nobody:nogroup /nfsshare # nobody is owner
+[root@nfsserver ~]# chown nobody:nobody /nfsshare # nobody is owner
 [root@nfsserver ~]# chmod 777 /nfsshare # everybody can modify files
 [root@nfsserver ~]# vi /etc/exports
 
