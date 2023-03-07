@@ -12,9 +12,15 @@ tags: Linux NFS
 install
 
 ```bash
-# “yum” (Red Hat Linux) as example
+# “yum” (Red Hat Linux) as example：
 [root@nfsserver ~]# yum install nfs-utils nfs-utils-lib
 [root@nfsserver ~]# yum install portmap (not required with NFSv4)
+```
+
+```bash
+# On Ubuntu and Debian：
+sudo apt-get update
+sudo apt install nfs-kernel-server
 ```
 
 Start the services on both machines.
@@ -32,6 +38,8 @@ Configure Export directory
 
 ```bash
 [root@nfsserver ~]# mkdir /nfsshare
+[root@nfsserver ~]# chown nobody:nogroup /nfsshare # nobody is owner
+[root@nfsserver ~]# chmod 777 /nfsshare # everybody can modify files
 [root@nfsserver ~]# vi /etc/exports
 
 /nfsshare 192.168.0.101(rw,sync,no_root_squash)
@@ -99,7 +107,14 @@ Clean idmap cache and restart idmap daemon:
 
 ### Setting Up the NFS Client
 
-Mount Shared Directories on NFS Client
+Installing NFS Client Packages
+
+```bash
+[root@nfsclient ~]# apt install nfs-common
+[root@nfsclient ~]# yum install nfs-utils
+```
+
+Mount Shared Directories on NFS Client Temporarily
 
 ```bash
 [root@nfsclient ~]# showmount -e 192.168.0.100
