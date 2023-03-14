@@ -56,6 +56,12 @@ Hint: These modes can be entered when calling Bash:
 - from commandline: bash -vx ./myscript 
 - from shebang (OS dependant): #!/bin/bash -vx 
 
+### Use Strace to check process status
+
+```bash
+strace -o strace.out -p `pidof lighttpd`
+```
+
 ### Inject debugging code
 
 Insert echos everywhere you can, and print to stderr:
