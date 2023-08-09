@@ -24,7 +24,7 @@ logger.setLevel(logging.DEBUG)
 logger.debug('it is a debug info')
 ```
 
-`Python 3.8 and later`: A new option, force, has been made available to automatically remove the root handlers while calling basicConfig().
+**Python 3.8 and later**: A new option, force, has been made available to automatically remove the root handlers while calling basicConfig().
 For example:
 
 ``` python
