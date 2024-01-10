@@ -350,3 +350,12 @@ add gitignore, stop tracking some ignore files
 git rm -r --cached .
 git ci -m "update git ignore"
 ```
+
+
+permanently authenticating with Git repositories
+
+```bash
+git config credential.helper store
+git config credential.helper 'cache --timeout 7200'
+git pull origin master
+```
