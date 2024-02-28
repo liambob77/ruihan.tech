@@ -205,3 +205,20 @@ yum search xxx
 alternatives --config xxx
 ```
 
+## SFTP put
+
+If you want to upload an entire directory, including all its files and subdirectories, you can use the -r (recursive) option: 
+
+``` bash
+put -r fold
+```
+
+To retain the original file's permissions and timestamps during the upload, use the -p (preserve) option: 
+
+``` bash
+put -p fold
+```
+
+
+
+
