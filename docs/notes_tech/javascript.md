@@ -45,3 +45,25 @@ yarn
 # or
 yarn install
 ```
+
+Use n module from npm to upgrade node:
+
+``` javascirpt
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable # stable nodejs
+sudo n latest # latest nodejs
+```
+
+To Fix PATH:
+
+``` javascirpt
+sudo apt-get install --reinstall nodejs-legacy     # fix /usr/bin/node
+```
+
+To undo:
+
+``` javascirpt
+sudo n rm 6.0.0     # replace number with version of Node that was installed
+sudo npm uninstall -g n
+```
